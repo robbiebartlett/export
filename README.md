@@ -1,3 +1,6 @@
+©BusinessNZ 2017
+
+
 npm i# PostCSS and JS Build Workflow 
 Setup of a PostCSS workflow, color opacity, cssnext (and more) that has all the functionality and fallbacks used frequently from Sass and Compass to accomodate an IE8 project.
 
