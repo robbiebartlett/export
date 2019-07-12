@@ -1,4 +1,4 @@
-©BusinessNZ 2017
+©Rob Bartlett 
 
 
 npm i# PostCSS and JS Build Workflow 
@@ -6,7 +6,7 @@ Setup of a PostCSS workflow, color opacity, cssnext (and more) that has all the 
 
 ## Setup & Install
 
-1. Use node and grunt and installed each plugin one at a time. You'll have to do the same and your needs will certainly vary from mine.
+1. Use of node and grunt, install each plugin one at a time. You'll have to do the same and your needs will vary.
 2. https://nodejs.org/download/
 3. http://gruntjs.com/getting-started
 4. https://github.com/nDmitry/grunt-postcss
@@ -23,7 +23,7 @@ Setup of a PostCSS workflow, color opacity, cssnext (and more) that has all the 
 This can be used on a production project with all the necessary fallbacks for IE8 - and future proofing. 
 
 
-## What PostCSS and other plugins used for the project
+## PostCSS and other plugins used for the project:
 
 ```
 //-------------------------------
