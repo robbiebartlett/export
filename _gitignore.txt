@@ -1,0 +1,12 @@
+# Logs
+logs
+*.log
+
+# Dependency directory
+node_modules
+
+# Maps directory
+dist/css/maps
+
+# Material Icons
+fonts/material-design-icons
