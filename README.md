@@ -1,5 +1,3 @@
-©Rob Bartlett 
-
 npm PostCSS and JS Build Workflow 
 Setup of a PostCSS workflow, color opacity, cssnext (and more) that has the functionality and fallbacks used frequently from Sass and Compass to accomodate an IE8 project.
 
