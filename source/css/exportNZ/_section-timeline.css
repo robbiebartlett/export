@@ -1,0 +1,321 @@
+/* ==========================================================================
+   ExportNZ - Section Timeline
+   ========================================================================== */
+
+/* ------- start: timeline ---------  */ 
+.timeline{
+  background-color:$off-white;  
+  padding-top:0;
+
+  .grid{
+    max-width:100%!important;
+
+    .grid-item{
+      lost-column:1/1 1;
+              
+
+      .grid-content {
+        display: flex;
+        height: auto;
+        position: relative;
+        text-align: center;
+          
+          
+          .header{
+            background-color:$export-blue-100;
+            box-shadow:inset 0 -8px 8px -10px $dark-grey;  
+            color:white;
+            margin:0;
+            padding:4.0em 0;
+              
+              h3{
+                  color:white;
+                  font-size:responsive 20px 36px;
+              }  
+              
+          } 
+        
+        }  
+          
+      }
+        
+    }
+
+  }
+
+
+/* ------- end: timeline ---------  */  
+
+
+/* ------- start: timeline ---------  */  
+#timeline {
+  position: relative;
+  padding: 2em 0;
+  margin-bottom: 2em;
+  margin-top: 2em;
+
+  @media $large{
+    margin-bottom: 3em; 
+    margin-top: 3em;     
+  } 
+    
+  &:before {
+    /* ------- vertical line ---------  */  
+    content: '';
+    position: absolute 0 auto auto 23px;
+    height: 100%;
+    width: 4px;
+    background-color:$grey-400;
+        
+    @media $medium{
+     left:35px;    
+    }
+      
+    @media $large{
+      left: 50%;
+      margin-left: -2px;        
+    }
+      
+  }  
+    
+}
+/* ------- end: timeline ---------  */ 
+
+
+/* ------- start: timeline-block ---------  */  
+.timeline-block{
+  position: relative;
+  margin:2em 0 0 1%;
+  width:95%;
+    
+    @media $small{
+     margin-left:6px;    
+    }  
+    
+  @media $medium{
+    margin-left:18px;      
+  } 
+    
+  @media $large{
+    margin: 4em 2.5%;
+    width: 95%;    
+      
+    &:nth-child(even) .timeline-content {
+      float: right;
+    }  
+     
+    &:nth-child(even) .timeline-content:before{
+      border-right-color: white;
+      left: auto;
+      right: 100%;
+      top: 24px;
+      transform-origin: 0 0;
+      transform: rotate(-315deg);
+      margin-right: -15px;    
+    }  
+      
+    &:nth-child(even) .timeline-content .date{
+      left:auto;
+      right:122%;
+      text-align:right;
+    }
+      
+  }  
+    
+  @media $x-large{
+    margin:4em 0;
+    width:100%;  
+  }  
+    
+  &:after{
+    content:"";
+    display:table;
+    clear:both;
+  } 
+    
+  &:first-child {
+    margin-top:0;   
+  }
+    
+  &:last-child {
+    margin-bottom:0;
+  } 
+    
+}
+/* ------- end: timeline-block ---------  */  
+
+
+/* ------- start: timeline-img ---------  */  
+.timeline-img{
+  border-radius:50%;
+  box-shadow:0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 2px 3px 4px rgba(0, 0, 0, 0.12);  
+  position:absolute 0 auto auto 1px;
+  width:40px;
+  height:40px;
+    
+  @media $small{
+    left:0;      
+  }
+    
+  @media $medium{
+    left:0;      
+  }    
+    
+  @media $large{
+    backface-visibility: hidden;    
+    height: 60px;
+    left: 50%;
+    margin-left: -30px;
+    transform: translateZ(0);
+    width: 60px;  
+  }    
+      
+  .timeline-icon{
+    display: block;
+    height: 65%;
+    margin-left: -33%;
+    margin-top: -35%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 65%;
+  }  
+    
+  /* ------- icon background colors ---------  */  
+  &.ema{background:#22548E;}    
+  &.cecc{background:#00B2EC;}  
+  &.osea{background:#BA2334;}    
+
+}
+/* ------- end: timeline-img ---------  */  
+
+
+/* ------- start: timeline-content ---------  */  
+.timeline-content {
+  background:white;
+  border-radius: 0.25em;
+  box-shadow:0 2px 3px rgba(0,0,0,0.12), 0 0px 2px rgba(0,0,0,0.24);
+  margin-bottom: 30px;    
+  margin-left: 60px;    
+  padding: 1em;
+  position: relative;
+    
+  @media $large{
+    margin-bottom:0;   
+    margin-left: 0;
+    padding: 1.6em;
+    width: 45%;
+  }    
+  
+  &:before{
+    border: 7px solid transparent;
+    border-right: 7px solid white;
+    border-color: transparent transparent #fff #fff;
+    box-sizing: border-box;  
+    box-shadow:-1px 1px 2px rgba(0,0,0,0.12);  
+    content: '';
+    height: 0;  
+    margin-right: -14px;  
+    position: absolute 14px 100% auto auto;
+    transform-origin: 0 0;
+    transform: rotate(45deg);  
+    width: 0;
+
+    @media $large{
+      border-left-color: white;
+      left: 100%;
+      margin-right:0;    
+      top:40px;
+      transform: rotate(-135deg);     
+    } 
+
+  }
+    
+  h2{
+   font-size:responsive 20px 26px;      
+   color:$dark-grey;
+  } 
+    
+  p{
+   font-size:responsive 16px 18px;
+   line-height: 1.6;         
+   margin: 1em 0;     
+  }
+    
+  .date {
+    color:$export-blue-400;  
+    display:inline-block;
+    float: left;  
+    font-size:responsive 18px 22px;        
+    padding:.8em 0;
+    position: absolute;
+    top: -45px;
+      
+    @media $large{
+      position: absolute 6px auto auto 122%;
+      width: 100%; 
+    }
+      
+  }  
+    
+}
+/* ------- end: timeline-content ---------  */  
+
+
+/* ------- start: cssanimations ---------  */  
+.timeline-column{
+  
+  @media $large{
+    .timeline-content{
+        
+      &.is-hidden{
+        visibility:hidden;
+      }
+      &.bounce-in{
+        animation:bounce-2 0.6s;  
+        visibility:visible;
+      }    
+  
+    }
+      
+    .timeline-block:nth-child(even) .timeline-content.bounce-in {
+      animation: bounce-2-inverse 0.6s;
+    }
+
+  }
+    
+}
+    
+@keyframes bounce-2 {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes bounce-2-inverse {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+/* ------- end: cssanimations ---------  */  

@@ -1,0 +1,357 @@
+/* ==========================================================================
+   Button base styles
+   ========================================================================== */
+
+/* 1.  General Settings */
+/* 2.  Primary Button */
+/* 3.  Secondary Button */
+/* 4.  Tertiary Button */
+/* 5.  Hero Slider Button */
+/* 6.  Feedback Button */
+/* 7.  Back to top Button */
+/* 8.  External Link Buttons */
+/* 9.  Share Buttons */
+/* 10. FullCalendar Buttons */
+
+/* Firefox inner border issue */
+button::-moz-focus-inner{ 
+    margin: 0; 
+    padding: 0; 
+}
+
+.btn,
+%btn{
+    backface-visibility: hidden;
+    background-color: transparent;
+    border-radius:$base-round;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: inline-block;
+    font-size:responsive 14px 17px;
+    font-weight:$normal;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 1px;
+    margin:0;
+    overflow: hidden;
+    padding: 0.6em 1.05em;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translateZ(0);
+    transition: color, background-color 0.5s;
+    vertical-align: middle;
+    z-index: $z-index-2;
+    
+    @media $small {
+      padding: 0.6em 0.75em;
+    }    
+
+    &:hover,
+    &:active,
+    &:focus {
+       
+       animation-duration: 1.5s;
+       animation-delay: 0.5s;
+       animation-timing-function: linear;
+       animation-iteration-count: infinite;
+       outline: none;
+       text-decoration: none;
+    }
+
+    .ripple {
+        z-index:$z-index--1;
+    }
+}
+
+
+/* ------- Primary Button - White ---------  */     
+.btn-primary{
+    border:2px solid white;
+    color: white;
+    
+    @media $medium{
+    
+     &:hover{
+       background-color:white;
+       color:$dark-grey;   
+     }
+         
+  }
+    
+}
+
+/* ------- Secondary Button - Blue ---------  */  
+
+.btn-secondary {
+    background-color:$export-blue-300;
+    border:2px solid $export-blue-300;
+    color: $white;
+    
+    @media $medium{
+    
+        &:hover{     
+          background-color:$export-blue-400;
+          border:2px solid $export-blue-400;    
+        }
+        
+    }
+    
+}
+
+/* ------- Tertiary Button - Dark Grey ---------  */  
+
+.btn-tertiary {
+    border:2px solid $dark-grey;
+    color: $dark-grey;
+    
+    @media $medium{
+    
+        &:hover{     
+          background-color:$dark-grey;
+          color:white;   
+        }
+        
+    }
+    
+}
+
+/* Hero slider buttons
+--------------------------------------------------*/
+.hero-slide .hero-content .btn:first-of-type{
+    
+    @media $large {
+      margin-left:0;
+    }
+}
+.hero{
+    
+  .btn{  
+    font-size:responsive 17px 20px;  
+    margin: 0.8em 0.5em 0.4em;
+  }  
+    
+} 
+
+/* Feedback buttons
+--------------------------------------------------*/
+
+.feedback{
+    position: absolute;
+    left:60%;
+    
+    @media $small {left:70%;}
+    @media $medium {left:2%;}
+    @media $large {left:4%;}
+    @media $x-large {left:2%;}
+    
+    
+    .btn{
+        border-top:transparent;
+        border-radius: 0;
+    }
+    
+    &.active{
+       
+       .btn{
+         background-color:white;
+         color:$dark-grey;
+    }
+        
+    } 
+}
+
+.feedback-submit{
+    background-color:white;
+    color:$export-blue-300;
+    margin-right: 1.5em;
+    width: 100%;
+
+    @media $medium{
+      margin-bottom:20px;
+    }
+    
+    .btn{
+        border-top:transparent;
+        border-radius: 0;
+        float:right;
+        
+        @media $medium{
+        
+         &:hover{
+          background-color:$export-blue-400;
+          color:white;    
+         }
+            
+        }
+        
+    }
+    
+    &.active{
+       
+       .btn-secondary{
+         background-color:$export-blue-100;
+         color:white;
+       }
+        
+    } 
+    
+}
+
+
+/* Back to top button (prepend via actions.js)
+--------------------------------------------------*/
+a.back-to-top {
+    background-color:$export-blue-100;
+    border:0px solid $export-blue-100;
+	border-radius: 30px;
+    bottom:50px;
+    box-shadow:0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	height:0;
+	position: fixed;
+	right:30px;
+	text-indent: -9999px;
+    transition: all 0.2s ease-in-out;
+	width:0;
+    z-index:$z-index-3;
+    
+    @media $large{
+      right:50px;
+    }
+
+    &:after{
+      border-bottom: 2px solid white;
+      border-left: 2px solid white;
+      bottom:30px;
+      content: ' ';
+      display: block;
+      height:0;
+      left: 30%;
+      opacity:0;
+      position: relative;
+      transform: rotate(135deg);
+      transition: all 0.2s ease-in-out;
+      width:0;
+    }
+
+
+  &.popup{
+      border:1px solid $export-blue-100;
+      bottom:15px;
+      height: 49px;
+      right:10px;
+      width: 49px;
+        
+      @media $large{
+        right:30px;
+      }
+      
+      &:after{
+        bottom:0;       
+        height: 18px;
+        opacity:1;
+        width: 18px;
+      }
+
+   }  
+
+}
+
+/* ------- external link Buttons ie: Read More ---------  */
+.grid-content a.btn{
+    lost-align: left;
+    margin: auto 0 0;
+    padding: 0.65em 0.95em;
+}
+
+.section-home-events h2{
+   color:$off-white;      
+}
+  
+
+/* ------- start:share Buttons ie: Facebook Twitter etc. ---------  */
+
+.share-buttons{
+  lost-center:100% 0 no-flex;
+  lost-masonry-wrap: no-flex;
+    
+    .grid-item{
+      height: 50px;
+      margin: 0;
+        
+      @media $medium{  
+        margin: 10px 0;
+      }  
+
+        .grid-content{
+           flex-flow:column wrap;
+            
+            ul{
+              display:flex;
+            
+           .nested-grid-item{
+             list-style-type: none;   
+             lost-align:center;
+             lost-masonry-column: 1/4 0px flex;
+             height: 50px;
+
+             @media $large{
+               lost-masonry-column: 1/5 0px flex;    
+             }
+               
+               &:first-of-type{
+                   margin-top:0;
+               }   
+
+             a{
+              padding:5px 0 0;
+              text-align: center;
+              width: 100%;
+                 
+              @media $medium{  
+                padding:10px 0 0;
+              }
+
+                &.facebook{background-color:$facebook;}
+                &.twitter{background-color:$twitter; } 
+                &.linkedin{background-color:$linkedin;}
+                &.email{background-color:$email;} 
+                &.print{background-color:$export-blue-100;}
+                    
+                .icon{
+                  height:25px;
+                  width:25px; 
+                    
+                  @media $large{  
+                    height:30px;
+                    width:30px;
+                  }
+                    
+                }    
+                    
+              } 
+              /* ------- Display Print Desktop Only ---------  */  
+              &:last-child{
+                display:none;
+                    
+                @media $large{
+                  display:block;
+                }
+                  
+             }
+               
+          }/* ------- end:nested-grid-item ---------  */
+                
+        }/* ------- end:grid-content ul ---------  */
+            
+      }/* ------- end:grid-content ---------  */
+ 
+   }/* ------- end:grid-item ---------  */
+    
+}/* ------- end:share-buttons ---------  */
+
+
+
+
+
+
+
+

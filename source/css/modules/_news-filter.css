@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Module - News Filter styles
+   ========================================================================== */
+
+  .news-filter{
+            background-color:$dark-grey;
+            width:100%;
+            
+            h3{
+              color:white; 
+              font-weight:$normal;
+              font-size:responsive 18px 25px;
+              margin: 0.8em 0.65em;
+              text-transform: uppercase;
+               
+              @media $medium{    
+                margin: 0.8em 0.75em 0.5em; 
+              }
+              @media $large{    
+                margin:1.125em 1em 0.5em!important
+              }
+                
+            }
+            
+           .nested-grid-item{ 
+             lost-column:1/1 30px no-flex; 
+             padding-bottom:20px;
+             position: relative -6px auto auto auto;
+               
+             &:last-child{
+               padding-bottom:20px;
+             }
+
+             @media $large{    
+               lost-column:1/2 30px no-flex;
+             }
+               
+             .search{
+               
+               margin:auto;
+               padding: 0 10px;
+                 
+               @media $medium{ 
+                 padding:10px 15px;
+               }                
+               @media $large{ 
+                 padding:10px 20px!important;
+               } 
+                 
+               .search-text{
+                  height:55px   
+               }  
+                 
+               .search-button{
+                 top: 14px;
+                 left:auto;
+                 right:14px;
+                       
+                 @media $medium{ 
+                   right:5px;
+                 }  
+                   
+                 @media $large{ 
+                   top: 16px;
+                   right:20px;
+                 }
+                     
+               }
+                 
+             }
+               
+           }  
+        
+       }
+/* --- end:news filter --- */ 

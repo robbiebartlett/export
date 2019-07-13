@@ -1,0 +1,111 @@
+/* ==========================================================================
+   Module - Breadcrumbs styles
+   ========================================================================== */
+
+/* ------- start: breadcrumb ---------  */
+.bread{
+   background-color:$off-white;
+   box-sizing: content-box;
+   display:flex;
+   overflow-y: hidden;
+   position: relative;
+   width: 100% !important;
+     
+    /* ------- start: grid ---------  */
+    .grid{
+        margin:0;
+        
+        @media $large{ 
+           margin:0.25em auto 0;
+        }
+        
+       /* ------- start: grid-item ---------  */       
+       .grid-item{
+          lost-column:1/1 0;
+          padding:0;
+          margin-bottom:0;
+           
+          /* ------- start: breadcrumbs ---------  */ 
+           .breadcrumbs{
+              display:none;
+              margin:0;
+              padding: 0;
+               
+              @media $large{ 
+                display: flex; 
+              }   
+
+              li{
+                flex: 1;
+                line-height: 1.3; 
+                list-style-type: none;
+                margin: 0.2em 0 0.6em;
+                padding: 0;
+                position: relative;
+                text-decoration: none;
+                white-space: nowrap;
+
+                @media $large{ 
+                  line-height: 1.4;
+                  margin: 0.2em 0 0.4em;
+                }
+
+                & > *{
+                  border-bottom:1px solid transparent;  
+                  color:$dark-grey;    
+                  display:inline-flex;
+                  font-size:0.9em;
+                  font-family:$font-secondary;
+                  font-weight:$normal;
+                  letter-spacing:1px;
+
+                   @media $large{
+                     &:hover{
+                       border-bottom:1px solid $dark-grey;
+                     }    
+                   }    
+
+                } 
+
+                 &.current > *{
+                   color:$export-blue-300;
+
+                   @media $large{
+                     &:hover{
+                       border-bottom:none;
+                     }    
+                   } 
+
+                 }  
+
+                /* custom arrow icon */  
+                &:before, &:after{
+                  background-color:$off-white; 
+                  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjQuMSAyNC4xIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNC4xIDI0LjE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdDB7ZmlsbDojMjkyODI3O30uc3Qxe2ZpbGw6bm9uZTt9PC9zdHlsZT48dGl0bGU+YW5nbGVfZG93bjwvdGl0bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTguNiw3LjRsNC42LDQuNmwtNC42LDQuNkwxMCwxOGw2LTZsLTYtNkw4LjYsNy40eiIvPjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0wLDI0VjBoMjR2MjRIMHoiLz48L3N2Zz4=);        
+                  content: '';
+                  height: 15px;
+                  vertical-align: middle;
+                  width: 15px;
+                } 
+
+                /* the gap between items */  
+                &:after{
+                  content: '';
+                  display: inline-block;
+                  margin: 0 .35em;
+                }  
+
+                /* hide arrow after the last item */
+                &:last-of-type::after{
+                  display: none;
+                } 
+
+              }  
+
+            }/* ------- end: breadcrumbs ---------  */ 
+  
+       }/* ------- end: grid-item ---------  */
+        
+   }/* ------- end: grid ---------  */ 
+    
+}/* ------- end: breadcrumbs ---------  */

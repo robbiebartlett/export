@@ -1,0 +1,140 @@
+/* ==========================================================================
+   Module - Pagination styles
+   ========================================================================== */
+
+/* --- start:section-pagination --- */   
+.section-pagination{
+ lost-column:1;  
+
+ .grid{    
+   justify-content: center;
+   margin-bottom:1em;
+   margin-top:1em;
+
+   @media $medium{  
+     margin-bottom:1.5em;
+     margin-top:1.5em;    
+   }   
+
+   .grid-item{  
+     background-color:transparent!important;  
+     margin:20px 0 0;
+
+         .pagination{
+            align-items: center;    
+            display: flex;               
+            flex-wrap: wrap;
+            justify-content: center;
+
+            li{
+              background-color: transparent;
+              display:none;  
+
+              /* reduce page numbers in mobile */
+              &:first-child, &:last-child, &.current {
+                display:block;
+              }
+
+              &:nth-of-type(2) a { 
+                border-left-width: 1px; 
+              }  
+
+              @media $small{  
+                &.current, &:first-of-type, &:last-of-type, &:nth-of-type(2), &:nth-last-of-type(2){
+                  display:block;    
+                }     
+
+                &:nth-of-type(2) a { 
+                  border-left-width: 0; 
+                }    
+
+              }     
+
+              @media $large{  
+                display:block;
+              }  
+
+              /* current page */  
+              &.current a{ 
+                color:white;
+                background-color:$dark-grey;
+                cursor: default;
+                pointer-events: none;
+              }
+
+              /* screen readers only */
+              &:first-of-type span,
+              &:last-of-type span,
+              &:nth-of-type(2) span,
+              &:nth-last-of-type(2) span { 
+                position: absolute -9999px auto auto -9999px;
+              }
+
+              &:not([class*="current"]) a:hover { 
+                background-color:$dark-grey;
+                color:white;
+                transition: all 0.2s ease-in-out;
+              }    
+
+              &:first-of-type a {
+                border-left-width: 1px;
+              }  
+
+              a{
+               align-items:center;
+               border: 1px solid $dark-grey;
+               border-left-width: 0;
+               color: $dark-grey;
+               display: flex;
+               flex-wrap: wrap;
+               font-weight:$bolder;
+               justify-content:center;
+               min-height:54px;
+               min-width:54px;            
+               padding-top: 1px;
+               text-decoration:none;
+
+               @media $large{  
+                 min-height:44px;
+                 min-width:44px;     
+               }   
+
+               .icon{
+                  width: 45px;
+                  height: 45px;
+                  padding: 15px;
+                  position: relative 0 auto auto auto;
+
+                  @media $small{  
+                    position: relative 1px auto auto auto;
+                  }  
+
+                  @media $large{  
+                    min-height:45px;
+                    min-width:45px;
+                    padding: 15px;
+                    position: relative -2px auto auto auto;
+                  }    
+
+                  &.last-arrow, &.next-arrow{
+                    transform: rotate(180deg);                
+                  }
+
+                  &.previous-arrow, &.next-arrow{
+                    width: 55px;
+                    padding: 15px 12px;                  
+                  } 
+
+                }/* --- end:icon --- */       
+
+              }/* --- end:pagination li a --- */   
+
+           }/* --- end:pagination li --- */   
+
+        }/* --- end:pagination --- */    
+     
+     }/* --- end:grid-item --- */     
+
+   }/* --- end:grid --- */        
+
+}/* --- end:section-pagination --- */  

@@ -1,0 +1,83 @@
+/* ==========================================================================
+   ExportNZ - Business Council Partners
+   ========================================================================== */
+
+.section-home-partners{
+     background-color:$off-white;
+     display:block;
+    
+    .grid{
+        margin-bottom:0!important;
+         
+    /* ------- start: Header Title ---------  */
+
+    .header{
+        lost-column:1/1;
+        margin-bottom:30px;
+        padding: 0 0.5em;
+        text-align: center;
+
+        @media $small{
+          padding: 0 1.5em;
+        }  
+
+         .nested-grid-item{  
+            lost-column:1/1 0 no-flex;
+
+        }
+
+    h2{ 
+        color:$dark-grey;  
+        font-size: responsive 25px 32px;
+        font-weight:$bold;
+        text-transform: uppercase;
+
+      }  
+
+    }/* ------- end: Header Title ---------  */
+
+
+ .grid-item {
+       lost-column:1/2 4 0%;
+       padding:0;
+
+       @media $small{
+         padding:0.5em 1.5em;  
+       }   
+
+       @media $medium{
+         lost-column:1/5 6 1.5%;    
+         padding:0;  
+       }      
+
+      
+ } 
+
+.grid-content {
+        padding:1.0em;
+        text-align: center;
+
+
+        @media $small{    
+           padding:1.0em;
+        }
+
+        .nested-grid-item{
+            margin: 0 auto;
+            
+            img{
+              opacity:1.0;
+              transition: all 0.2s ease-in-out;  
+                
+              &:hover{
+                opacity:0.9;
+              }    
+          }
+            
+      }
+
+   }
+        
+    }
+    
+}

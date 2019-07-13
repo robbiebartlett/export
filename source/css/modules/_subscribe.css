@@ -1,0 +1,192 @@
+/* ==========================================================================
+   Subscribe 
+   ========================================================================== */
+
+/* ---start:Mailchimp subscribe--- */   
+#mc_embed_signup{
+    clear:left; 
+    font-size:0.9em;
+    height:45px;
+    margin: 0 auto;
+    max-width:525px;
+    padding:0;
+    width:100%;
+    
+    @media $medium{
+      margin-bottom:0;
+    }    
+    
+    @media $large{
+      max-width:100%;
+    }  
+
+    
+    .subscribe-button{
+      display: inline-flex;  
+        
+    }
+    
+    form{
+      text-align:left; 
+      padding:0;
+      position:relative;
+        
+      @media $medium{
+        text-align:right; 
+      }
+        
+    } 
+    
+    input.email {
+      background-color: #ffffff;
+      border: none;
+      bottom:-20px;    
+      box-sizing:border-box;
+      color:$dark-grey;
+      display: inline-block;    
+      font-family:$font-secondary; 
+      font-size:1.0em; 
+      height:45px; 
+      margin:0 -4px 0 0; 
+      outline: none;
+      padding: 0px 0.4em;
+      position:absolute;
+      vertical-align:top;
+      width:100%;    
+        
+      @media $medium{
+        bottom:0;
+        position:relative;
+        right: 20px;
+        width:310px;
+      }      
+        
+      @media $large{
+        width:320px;
+      }   
+       
+    }
+    
+    ::-webkit-input-placeholder {
+        color:$dark-grey;
+        font-size:11pt;
+        opacity:1;
+        
+        @media $small{
+          font-size:14pt;    
+        } 
+    }
+    ::-moz-placeholder {
+        color:$dark-grey;
+        font-size:11pt;
+        opacity:1;
+        
+        @media $small{
+          font-size:14pt;    
+        } 
+    }    
+    :-moz-placeholder {
+        color:$dark-grey;
+        font-size:11pt;
+        opacity:1;
+        
+        @media $small{
+          font-size:14pt;    
+        } 
+    }
+    :-ms-input-placeholder {
+        color:$dark-grey;
+        font-size:11pt;
+        opacity:1;
+        
+        @media $small{
+          font-size:14pt;    
+        } 
+    
+    }    
+    :-ms-input-placeholder{
+        color:$dark-grey;
+        font-size:11pt;
+        opacity:1;
+        
+        @media $small{
+          font-size:14pt;    
+        } 
+    
+    }
+    ::placeholder {
+        color:$dark-grey;
+        font-size:11pt;
+        opacity:1;
+        
+        @media $small{
+          font-size:14pt;    
+        } 
+    }
+    
+    /* ---start:Submit button--- */
+    .subscribe-button {
+        background-color: $export-blue-100;
+        display: inline-block!important;
+        height: 45px;
+        position:absolute;
+        right:0;
+        top:-25px;
+        width:45px;
+        z-index:$z-index-2;
+        
+        @media $medium{
+          right: -26px;
+          top:0;
+        } 
+        
+        &:hover{
+          background-color: $export-blue-300; 
+        }
+
+        #mc-embedded-subscribe{
+          background: transparent;
+          border: none;
+          color:$off-white;
+          cursor: pointer;
+          display: block;
+          font-size: 2.8em;
+          padding:0;
+          position: relative -2px auto auto 2px;
+          transition: all .05s linear;
+        }
+          
+      }  
+    /* ---end:Submit button--- */
+    
+    #mce-error-response {
+      display:none;
+    }
+    
+    #mce-responses {
+      float:left; 
+      top:-1.4em; 
+      padding:0em .5em 0em .5em; 
+      overflow:hidden; 
+      width:90%;
+      margin: 0 5%; 
+      clear: both;
+    }
+    
+    #mce-success-response {
+      color:#009ddc; 
+      display:none;
+    }
+    
+    .response {
+      margin:1em 0; 
+      padding:1em .5em .5em 0; 
+      float:left; 
+      top:-1.5em; 
+      z-index:$z-index-1; 
+      width:80%;}
+    
+}
+/* --- end:Mailchimp subscribe--- */ 
+
+

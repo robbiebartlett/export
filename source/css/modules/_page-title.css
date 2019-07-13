@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Module - Page Title styles
+   ========================================================================== */
+
+/* ------- start: Page Title ---------  */
+.page-title{
+    lost-column:1/1;
+    background-color:$dark-grey;
+    position: relative;
+	margin:60px auto 0;
+	box-sizing: content-box;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    width: 100%!important;
+    
+    @media $large{
+      margin-top:65px;  
+    } 
+
+    
+    .grid{
+      line-height: 1.6;    
+      margin: 0.8em auto;
+
+
+    .grid-item{  
+       display: flex;
+       justify-content: flex-start;
+        margin-bottom:0;
+
+        h2{ 
+          color:$off-white;  
+          font-size: responsive 20px 24px;
+          font-weight:$normal;
+         } 
+         
+       }
+
+    }
+
+
+}/* ------- end: Page Title ---------  */
+    
+
+
+

@@ -1,0 +1,474 @@
+/* ==========================================================================
+   Module - FullCalendar styles - http://fullcalendar.io/
+   ========================================================================== */
+
+/* --- start:events-calendar --- */  
+.events-calendar{
+    background-color:white;
+    
+    .grid{
+       max-width:100%!important;
+       padding:0.5em;
+        
+       @media $large{ 
+        padding:1.5em;
+       } 
+        
+        h2{   
+          color:$dark-grey;  
+          font-size:responsive 20px 25px;
+          font-weight:$bold;
+          margin-bottom:20px;
+          text-transform: uppercase;
+        
+          @media $large{ 
+            font-weight:$normal;
+          }
+            
+       } 
+
+        /* Overall wrapper */
+        .monthly {
+            background:$off-white;
+            border:10px solid $export-blue-100;
+            color:$dark-grey;
+            position: relative;
+            user-select: none;
+        }
+
+        /* Contains title & nav */
+        .monthly-header {
+            background:$export-blue-100;
+            box-sizing: border-box;
+            height:60px;
+            padding:15px 10px;
+            position: relative;
+            text-align:center;
+            z-index:$z-index-2;
+
+            @media $large{ 
+              padding:10px;
+            }
+
+        }
+        .monthly-header-title {
+            color:white;
+            font-size:responsive 20px 32px;
+            text-transform: uppercase;
+        }
+        /* wrapper for left button to make the clickable area bigger */
+        .monthly-prev {
+            height:100%;
+            position: absolute 0 auto auto 0;
+            width:60px;
+
+
+            &:after{
+              border-left:2px solid white;
+              border-bottom:2px solid white;    
+              content:'';
+              height:20px;
+              margin:-12px 0 0 -15px;    
+              position: absolute 50% auto auto 50%;
+              transform:rotate(45deg);
+              width:20px;
+            }
+
+        }
+
+        .monthly-next{
+            height:100%;
+            position:absolute 0 0 auto auto;
+            width:60px;
+
+            &:after{
+              border-right:2px solid white;
+              border-top:2px solid white;    
+              content:'';  
+              height:20px; 
+              margin:-12px 0 0 -15px;
+              position: absolute 50% auto auto 50%;
+              transform:rotate(45deg);
+              width:20px; 
+            }
+
+        }
+
+
+
+
+        /* Day of the week headings */
+        .monthly-day-title-wrap {
+            box-shadow:0px -2px 4px rgba($dark-grey, 0.35);
+            display:table;
+            table-layout:fixed;
+            width:100%;
+            background:white;
+            border-bottom: 1px solid $grey-300;
+        }
+        .monthly-day-title-wrap div {
+            border-right:1px solid $grey-300;
+            box-sizing:border-box;
+            display:table-cell;
+            font-size: 0.8em;
+            font-weight: bold;
+            padding: 5px 0;
+            position: relative;
+            text-align:center;
+            text-transform: uppercase;
+            width: 14.28%!important;
+
+            &:last-child{
+              border-right:none;
+            }
+
+        }
+
+        /* Calendar days wrapper */
+        .monthly-day-wrap {
+            box-shadow:0px 2px 4px rgba($dark-grey, 0.35);
+            display:table;
+            overflow: hidden;
+            table-layout:fixed;
+            width:100%;
+        }
+        .monthly-week{
+            display:table-row;
+            width:100%;
+        }
+        /* Calendar Days */
+        .monthly-day, .monthly-day-blank {
+            background:white;
+            box-shadow: 0 0 0 1px $grey-300;
+            box-sizing:border-box;
+            color:inherit;
+            display:table-cell;
+            font-weight:$bold;
+            padding:0;
+            position: relative;
+            text-decoration:none;
+            transition:.25s;
+            vertical-align: top;
+            width: 14.28%!important;
+        }
+
+        /* Trick to make the days' width equal their height */
+        .monthly-day:before {
+            content: "";
+            display: block;
+            float: left;
+            padding-top: 100%;
+        }
+
+        /* Hover effect for non event calendar days */
+        .monthly-day:hover {
+            background:$grey-300;
+        }
+
+        /* Days that are part of previous or next month */
+        .monthly-day-blank {
+            background:$grey-200;
+        }
+
+        /* Event calendar day number styles */
+        .monthly-day-event > .monthly-day-number {
+            font-size:responsive 12px 13px;
+            line-height: 1em;
+            position: absolute 5px auto auto 5px;
+        }
+
+        /* Non-Event calendar day number styles */
+        .monthly-day-pick {
+        }
+        .monthly-day-pick > .monthly-day-number {
+            line-height: 1em;
+            font-size:11px;
+            padding-top:35%;
+        }
+
+        .monthly-day-pick > .monthly-indicator-wrap {
+            margin:0;
+        }
+
+        /* Days in the past in "picker" mode */
+        .monthly-past-day:after{
+            content: '';
+            width: 150%;
+            height: 2px;
+            transform-origin: left top;
+            transform: rotate(45deg);
+            background: rgba(0, 0, 0, 0.1);
+            position: absolute 0 auto auto 0;
+        }
+        .monthly-past-day:hover {
+            background:white!important;
+        }
+        /* Current day style */
+        .monthly-today{
+            background-color:$export-blue-200;
+            box-shadow: inset 1px 1px 7px -2px rgba(0,0,0,0.78);
+
+             &:hover{
+               color:$dark-grey;
+             } 
+
+            .monthly-day-number{
+              color:white;
+           } 
+
+        }
+
+        .monthly-day-pick.monthly-today .monthly-day-number {
+            padding:0;
+            margin:22% 22% 0 22%;
+}
+
+
+        /* --- start:Button to reset to current month --- */  
+        .monthly-reset, .monthly-cal{
+            border:2px solid $export-blue-100;
+            border-radius: 30px;
+            color:$export-blue-100;
+            cursor: pointer;
+            font-size: 22px;
+            font-weight: 700;
+            height: 40px;
+            line-height: 0;
+            padding:19px 4px 17px;
+            position: absolute;
+            top:-55px;
+            transition: all 0.2s ease-in-out;
+            width: 40px;
+
+            @media $medium{  
+               top:-58px;
+            }    
+
+            @media $large{  
+               top:-65px;
+            }
+
+            &:hover{
+              background-color:$export-blue-100;  
+              color:white;   
+              cursor: pointer;
+              text-decoration: none;
+
+              &:after{
+                border-bottom: 2px solid white;
+                border-left: 2px solid white;    
+              } 
+
+            }   
+
+        }  
+
+        .monthly-reset{
+            right:45px;
+
+            &:after{  
+              border-bottom: 2px solid $export-blue-100;
+              border-left: 2px solid $export-blue-100;
+              content: ' ';
+              display: block;
+              height: 0.55em;
+              margin: -6px 10px 0;
+              transform: rotate(45deg);
+              width: 0.55em;
+            }
+
+        }  
+
+         .monthly-cal {
+            right:-8px;
+
+            &:before{
+              content: "✕";
+            }
+
+         }
+        /* --- end:Button to reset to current month --- */  
+
+
+        /*--- Wrapper around events ---*/
+        .monthly-indicator-wrap {
+            position: relative;
+            text-align: center;
+            line-height: 0;
+            max-width: 20px;
+            margin:0 auto;
+            padding-top:40%;
+        }
+
+        /* Event indicator dots */
+        .monthly-day .monthly-event-indicator {
+            background:$dark-grey;
+            border-radius:6px;
+            color:transparent;
+            display:inline-block;
+            font-size:0;
+            height:8px;
+            margin:1px;
+            vertical-align: middle;
+            width: 8px;
+
+            @media $small{ 
+              border-radius: 8px;
+              height: 10px;
+              width: 10px;
+            }
+
+            @media $medium{ 
+              border-radius:0;
+              box-sizing: border-box;     
+              color:white;    
+              display: block;
+              font-size:0.8em;
+              height:20px;  
+              line-height: 1em; 
+              margin: 0 0 1px 0;
+              overflow: hidden;  
+              padding: 4px;
+              text-decoration: none;
+              text-overflow: ellipsis;
+              text-shadow:0 0 2px rgba(0,0,0,.2);
+              white-space: nowrap;
+              width: auto;
+            }  
+
+            &:hover {
+              cursor: pointer;
+            }
+
+        }
+
+
+        /* start:Listing of events under calendar */
+        .monthly-event-list {
+            background: rgba(41, 40, 39, 0.9);
+            overflow: auto;
+            position: absolute;
+            top: 60px;
+            width: 100.1%;
+            height: calc(100.12% - 60px);
+            display: none;
+            transition:.25s;
+            transform:scale(0);
+            z-index:$z-index-1;
+            
+            @media $small{  
+              height: calc(100% - 60px);   
+            }
+            
+        }
+
+        /* Days in Events List */
+        .monthly-list-item {
+            border-bottom: 1px solid $grey-400;
+            display: none;
+            min-height: 60px;
+            padding:10px 10px 5px 50px;
+            position: relative;
+            text-align: left;
+            
+            &:after{
+              content:'No Events';
+              display:block;
+              margin-bottom:5px;
+              padding:4px 10px;
+            }
+
+        }
+
+        .monthly-event-list .monthly-today .monthly-event-list-date {
+            color:white;
+        }
+
+        /* Events in Events List */
+        .monthly-event-list .listed-event {
+            border-radius:2px;
+            color:white;
+            display: block;
+            margin-bottom:5px;
+            padding:4px 10px;
+        }
+
+        .monthly-list-item a:link, .monthly-list-item a:visited {
+            text-decoration: none;
+        }
+
+        .item-has-event {
+            display:block;
+
+            &:after{
+              display:none!important;
+            }
+
+        }
+
+        .monthly-event-list-date {
+            color:white;
+            font-size:0.8em;
+            font-weight: bold;
+            line-height: 1.5em;
+            position: absolute 13px auto auto 0;
+            text-align: center;
+            width:50px;
+        }
+
+        .monthly-list-time-start, .monthly-list-time-end {
+            display: inline-block;
+            font-size:.8em;
+        }
+
+        .monthly-list-time-end:not(:empty):before {
+            content:'-';
+            padding:0 2px;
+        }
+
+        /* Events List custom webkit scrollbar */
+        .monthly-event-list::-webkit-scrollbar {width: 9px;}
+
+        /* Track */
+        .monthly-event-list::-webkit-scrollbar-track {background: none;}
+
+        /* Handle */
+        .monthly-event-list::-webkit-scrollbar-thumb {
+            background:#ccc;
+            border:1px solid #E9EBEC;
+            border-radius: 10px;
+
+            &:hover{
+              background:$dark-grey;
+            }
+
+        }
+
+
+
+        /* Styles for large mode where text is revealed within events */
+        @media (min-width: 768px) {
+            .monthly-day-event {
+                padding-top: 20px;
+            }
+            .monthly-day-event:before {
+                padding-top: 77%;
+            }
+            .monthly-day-event > .monthly-indicator-wrap {
+                width:auto;
+                max-width: none;
+            }
+            .monthly-indicator-wrap {
+                padding:0;
+            }
+            .monthly-day .monthly-event-indicator {
+
+            }
+        }
+
+        
+        
+        
+    } 
+}
+/* --- end:events-calendar --- */  

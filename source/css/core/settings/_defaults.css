@@ -1,0 +1,38 @@
+/** Settings - Defaults **/
+
+/* High-level base settings. */
+$base-font-size:        1.0rem;
+$base-line-height:      1.5rem;
+$base-text-color:       $grey-800;
+$base-background-color: $white;
+$base-round:            0.125rem;
+$base-spacing-unit:     0.5rem;
+
+/* Z-Depth */
+$z-index-2:      1020;
+$z-index-1:      1010;
+
+
+/* Media Queries */
+    $alcatel: max-width 320px;
+    $iphone:480px;
+    $palm: max-width 480px;
+    $palm-landscape: max-width 767px;
+    $palm-land-up: 768px;
+    $lap: 481px 1023px;
+    $lap-and-up: 481px;
+    $portable: max-width 1023px;
+    $note: 1024px 1279px;
+    $note-and-up: 1024px;
+    $below-desk: max-width 1280px;
+    $desk: 1281px;
+    $desk-wide: 1400px;
+    $full-hd: 1920px;
+    $short: max-height 799px;
+    $tall: min-height 800px;
+
+   @media (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio:2) {
+     #foo {
+         content: "Device Pixel Ratio of at least 2";
+      }
+    }

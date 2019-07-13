@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Modules - Join Now Box styles
+   ========================================================================== */
+
+ /* --- start:join-now --- */ 
+.join-now {
+   display:none; 
+    
+  @media $medium{  
+    display:block;   
+    position: relative;
+    overflow: hidden;
+    margin:15px auto 0 auto;
+    background-color:$export-blue-100;
+    padding: 20px;
+    
+    h2,p{
+      color:white;
+      font-weight:$normal;    
+    }
+    
+    p{
+      line-height:1.5;
+    }
+       
+  }
+}
+/* --- end:join-now --- */ 
+
+
+

@@ -1,0 +1,73 @@
+/** Components - Fixed Header
+*     This partial contains all scrolling fixed header menu related styles for
+*     all affected elements such as the .utility-nav, .primary-nav etc
+**/
+
+.global-header {
+        z-index: $z-index-2;
+        transition-property:transform, height, background-color, border-shadow;
+        transition-duration:0.6s;
+        transition-timing-function: ease-out;
+        
+        .moving &, .fixed-header & {
+            background-color: rgba(0,0,0,0.6);
+            z-index:$z-index-0;
+    }
+}
+
+
+.utility-nav {
+        @include position(fixed, top 0 left 0);
+        z-index: $z-index-2;
+        width: 100%;
+        background-color: transparent;
+        transition-property:transform, background-color, border-shadow;
+        transition-duration:0.6s;
+        transition-timing-function: ease-out;
+
+        .scrolling &, .fixed-header &{
+            background-color: rgba(0,0,0,0.6);
+            z-index:$z-index-0;
+        }        
+}
+
+    .utility-nav__logo {
+            transition-property:padding;
+            transition-duration:0.6s;
+            transition-timing-function: ease-out;
+
+            .moving, .fixed-header{
+                padding: 0.5rem 0;
+            }
+
+        img {
+                .scrolling &, .fixed-header &{
+                    width: 80px;
+                }            
+            
+                .moving &, .fixed-header &{
+                    width:125px;
+                }
+
+        }
+    }
+
+    .utility-nav__primary-toggle, .utility-nav__search-toggle {
+        a {
+            color: $white;
+        }
+    }
+
+    .utility-nav__primary-toggle {   
+        position: absolute, 8px 0 0 16px;
+    }
+
+.primary-nav {
+        transition-property:padding;
+        transition-duration:0.6s;
+        transition-timing-function: ease-out;
+
+        .moving &, .fixed-header &{
+            padding-top:3.375em;
+        }
+}

@@ -1,0 +1,291 @@
+/* ==========================================================================
+   Icon styles
+   ========================================================================== */
+
+/* 1.  Miscellaneous */
+/* 2.  Submenu dropdown arrow */
+/* 3.  Dropdown menu */
+/* 4.  Pagination Icons */
+/* 5.  Share Icons */
+/* 6.  People contact Icons */
+/* 7.  Footer Icons */
+
+
+
+.icon{
+    display: inline-flex;
+}
+
+
+/* Standard icon color settings */
+
+.background {fill: transparent;opacity:0;}
+
+.filler{fill:$export-blue-50;}
+
+.lines{fill:$dark-grey;}
+
+
+/* ------- start: Sub menu > Arrow Icons ---------  */  
+.section-submenu ul li a.submenu{
+    
+    &.active, &:hover{
+
+        svg path.lines{
+          {fill:white;} 
+        }
+
+   }  
+
+}
+/* ------- end: Sub menu > Arrow Icons ---------  */  
+
+
+
+/* ------- start: Dropdown menu > Contact Icons ---------  */  
+.icon-links a{
+  display: inline-block;    
+
+      #telephone, #envelope, #mobile, #link, #marker{
+        border: 2px solid white;
+        border-radius: 50px;
+        height: 50px;
+        margin:0 5px;  
+        padding: 10px;
+        width: 50px;
+          
+        &:hover{
+              background-color:white;
+              transition: all 0.2s ease-in-out;  
+        }  
+          
+      }
+
+      .telephone{
+        margin-left:0;  
+      }
+
+      .telephone, .envelope, .mobile, .link, .marker{
+        height:50px;
+        padding: 12px;
+        position: relative -12px auto auto -12px;
+        width:50px;  
+
+      .filler{
+           {fill:transparent;} 
+       }
+
+      .lines{
+          {fill:white;} 
+        } 
+          
+          
+       &:hover{
+        .filler{
+           {fill:transparent;} 
+        }
+
+        .lines{
+          {fill:$export-blue-400;} 
+        }
+           
+     }   
+          
+  }      
+
+}
+/* ------- end: Dropdown menu > Contact Icons ---------  */  
+
+
+
+/* ------- start: Pagination Icons ---------  */  
+.pagination li a{
+    height:15px;
+    width:15px;
+
+    .icon{  
+      .lines{{fill:$dark-grey;}}
+
+      &:hover{
+        .lines{{fill:white;}}   
+      }
+        
+   }
+    
+}
+/* ------- end: Pagination Icons  ---------  */  
+
+
+
+/* ------- start: Share Icons ---------  */  
+.share-buttons a{
+ 
+    .icon-facebook, .icon-twitter, .icon-linkedIn, .icon-envelope, .icon-printer{
+
+        svg
+          path.filler, path.lines{
+            fill:white;
+        }
+
+    } 
+
+}
+/* ------- end: Share Icons ---------  */  
+
+
+
+
+/* ------- start: people-info-links ---------  */     
+.people-links{
+    
+      a{
+     align-items: center;
+     display: inline-flex;
+     font-size: responsive 12px 15px;
+     justify-content: center;
+     margin: 10px 0;
+
+     &:hover{
+       text-decoration: none;
+     }   
+
+      .icon{
+          border: 2px solid $dark-grey;
+          border-radius: 50%;
+         
+          
+          &:hover{
+            background-color:$dark-grey;
+            transition: all 0.2s ease-in-out; 
+          }
+          
+
+            .telephone, .envelope, .mobile{
+               height: 30px;
+               padding: 7px;
+               width: 30px;
+
+               .filler{{fill:transparent;}}
+               .lines{{fill:$dark-grey;}}  
+
+                &:hover{
+                   .lines{{fill:white;}}
+                }  
+
+              }
+          
+            .mobile{
+              position: relative;
+              left: 3px;
+            }
+
+           }
+       
+       span{
+        border-bottom:1px solid transparent;   
+        color:$grey-500;   
+        margin-left: 15px;
+           
+          &:hover{
+            border-bottom:1px solid $grey-500;
+            text-decoration: none;
+           }  
+       }
+
+   } 
+    
+}  
+/* ------- end: people-info-links ---------  */        
+
+
+
+/* ------- start: Footer Icons ---------  */  
+.social-media{
+    display: inline-flex;
+
+   a{
+     align-items: center;
+     display: inline-flex;
+     font-size: responsive 12px 15px;
+     justify-content: center;
+     margin: 10px 0;
+
+     &:hover{
+       text-decoration: none;
+     }   
+
+      .icon{
+
+          &:hover{
+            background-color:$off-white;
+            transition: all 0.2s ease-in-out; 
+          }
+          
+
+            .twitter, .facebook, .linkedin, .youtube{
+               height: 38px;
+               padding: 7px;
+               width: 38px;
+
+               .filler{{fill:transparent;}}
+               .lines{{fill:white;}}  
+
+              }
+          
+          .facebook{
+              background-color:$facebook;
+          } 
+          .twitter{
+             background-color:$twitter;   
+          } 
+          .linkedin{
+             background-color:$linkedin;   
+          } 
+          .youtube{
+             background-color:$youtube;   
+          }
+
+           }
+
+
+   } 
+    
+    .social{
+      margin:10px 5% 15px;
+
+      @media $medium{
+         margin:0 7px;
+
+        &:first-of-type{
+            margin-left:0;
+        } 
+          
+      }
+        
+      @media $large{
+        &:first-of-type{
+            margin-left:20px;
+        }   
+      } 
+  
+    }    
+
+}
+/* ------- end: Footer Icons ---------  */      
+
+
+
+/* ------- start: Miscellaneous ---------  */    
+.contact div.icon svg.envelope{
+     height:50px;
+     padding:10px;
+     width:50px;
+    
+     @media $small{ 
+       height:40px;
+       width:40px;
+     }
+    
+    .lines{{fill:white;}} 
+} 
+/* ------- end: Miscellaneous ---------  */   

@@ -1,0 +1,42 @@
+/** Settings - Color **/
+
+/*Grey color*/
+$grey-50:               #FAFAFA;
+$grey-100:              #F5F5F5;
+$grey-200:              #EEEEEE;
+$grey-300:              #E0E0E0;
+$grey-400:              #BDBDBD;
+$grey-500:              #9E9E9E;
+$grey-600:              #757575;
+$grey-700:              #616161;
+$grey-800:              #353535;
+$grey-900:              #262626;
+
+
+/*Black*/
+$black:                 #000000;
+$black-1:               rgba(0, 0, 0, 0.87);
+$black-2:               rgba(0, 0, 0, 0.54);
+$black-3:               rgba(0, 0, 0, 0.26);
+$black-4:               rgba(0, 0, 0, 0.12);
+
+
+/*White*/
+$white:                 #FFFFFF;
+$white-1:               rgba(255, 255, 255, 0.70);
+$white-2:               rgba(255, 255, 255, 0.30);
+$white-3:               rgba(255, 255, 255, 0.12);
+
+
+/*ExportNZ*/
+$blue              :  #009ddc;
+$dark-grey         :  #292827;
+$light-grey        :  #f1f3f6;
+
+/*Misc*/
+$linkedIn          : #007bb6;
+$facebook          : #3b5998;
+$twitter           : #55acee;
+$google-plus       : #dc4e41;
+$dialogue          : #90cc82;
+$optional          : #c9af78;

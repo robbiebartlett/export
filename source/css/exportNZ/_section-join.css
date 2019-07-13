@@ -1,0 +1,502 @@
+/* ==========================================================================
+   ExportNZ - Join
+   ========================================================================== */
+
+/* ------- start:join ---------  */  
+ .join-exportnz{
+   margin:0;
+   padding:0;
+
+   .grid{
+     max-width:100%!important; 
+     margin: 0;   
+     padding:0;
+     position: relative;   
+
+     .grid-item{
+      lost-column:1/1; 
+        
+      .grid-content {
+         padding:0.5em; 
+          
+         @media $large{   
+           padding: 1.5em;
+         }
+
+         h3{ 
+          font-size:responsive 20px 28px;
+          font-weight:$normal;
+          padding:0.5em 0;     
+          text-transform: uppercase;
+
+          @media $large{ 
+            font-weight:$normal;
+            padding: 0.5em 0;
+            text-transform:uppercase;
+          }
+       }  
+       
+        /* ------- start:graph ---------  */    
+       .graph{ 
+            display: block;
+            margin:0;
+            max-width: 850px;
+            padding:20px 0;
+            position:relative;
+            width:100%;
+           
+            @media{
+              padding:10px 0 30px;
+            }
+              
+            @media $large{ 
+              margin:auto;  
+            } 
+           
+            .border {
+              display: none;
+                
+              @media $small{
+                display:block;      
+              }   
+                
+            }
+           
+           #member-region{ 
+             right: 2%;   
+             transform: scale(1.8);
+             transition: 0.3s ease-in-out;
+               
+               
+            @media $small{  
+              padding:0;   
+              right:auto;    
+              transform: scale(1); 
+            }     
+               
+           }
+              
+           svg#member-graph{
+            display:none;   
+            position: absolute;
+            z-index:$z-index-1;
+               
+            @media $small{   
+              display:block;   
+            }   
+               
+           }  
+           svg#member-region{
+             position:relative;
+             z-index:$z-index-2;
+           }
+           
+           svg#member-graph,svg#member-region{
+              filter: drop-shadow(0 2px 2px rgba(0,0,0,0.26));  
+              -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,0.26));    
+            }
+            #ema, #busC, #osea, #cecc{
+              cursor: pointer;
+              transition: all 0.2s ease-in-out;        
+            }  
+  
+            #ema{
+		      fill:#b6b6b6;
+              &:hover{fill:#0051a1;}
+                
+              .logo{
+               transform:translate(510px,100px);
+             
+               @media $small{   
+		         transform:translate(540px,1px);
+               }
+               
+	          }     
+                
+	        }  
+              
+            #busC{
+		      fill:#8c8c8c;
+              &:hover{fill:#c31c2d;text-decoration: none;} 
+                
+              .logo{
+                 transform: translate(270px,195px);
+             
+               @media $small{   
+		         transform:translate(640px,146.5px);
+               }
+               
+	          }     
+                
+	        }
+           
+            #cecc{
+		      fill:#606060;
+              &:hover{fill:#02b1f0;} 
+                
+              .logo{
+               transform: translate(480px,285px);
+             
+               @media $small{   
+		         transform:translate(530px,405px); 
+               }
+               
+	          }   
+  
+	        } 
+
+            #osea{
+		      fill:#353535;
+		      &:hover{fill:#a80b2a;}
+                
+             .logo{
+               transform: translate(195px,330px);
+             
+               @media $small{   
+		         transform:translate(80px,390px);
+               }
+               
+	         }   
+                
+	        }             
+
+              
+
+             
+         } 
+        /* ------- end:graph ---------  */      
+
+      }
+      /* ------- end:grid-content ---------  */   
+    }
+     /* ------- end:grid-item ---------  */   
+  }
+   /* ------- end:grid ---------  */   
+} 
+/* ------- end:join ---------  */                  
+
+
+
+/* ------- start:regional-modals  ---------  */   
+.overlay {
+   background: rgba(0,0,0,.75);
+   height: 100%;
+   position:fixed 0 auto auto 0;
+   width: 100%;
+   z-index:$z-index-5;
+    
+   @media $small{
+     position: absolute;     
+   } 
+    
+}
+
+.modal{
+  visibility: hidden;
+}
+
+.modal-content{
+    background-color:white;
+    border-radius:0;
+    box-shadow:0 10px 25px rgba(0, 0, 0, 0.5);
+    display:flex;
+    flex-direction:column;
+    height:auto;
+    margin:0;
+    padding:0;
+    position: absolute 0;
+    width:100%;
+    z-index:$z-index-5; 
+
+    @media $small{
+      border-radius:3px 5px 5px 3px;  
+      flex-direction:row;    
+      height:75%;
+      margin:auto;    
+      position: absolute 0;
+      width:90%;
+    }
+
+    @media $medium{
+     height:55%;
+     max-width: 450px;
+     width:70%;    
+    }
+
+    @media $large{   
+      height:50%;
+      width:50%;       
+    }    
+
+    h2{
+        font-size:responsive 20px 24px;
+    }
+    
+    p{
+     line-height:1.5;
+     margin: 1.2em 0;
+    }
+    
+    .membership{
+      padding:1.0em;
+  
+      @media $small{ 
+        padding:1em 0 1em 1em;  
+      }
+        
+    }
+
+    .contact{
+      border-radius:0; 
+      margin:0;
+      padding:1.0em;
+        
+        
+      @media $small{  
+       border-radius:0 3px 3px 0; 
+       display:inline;      
+       padding:1em;      
+      }  
+        
+      &.ema{
+        background-color:#004FA2;    
+      }            
+      &.busC{
+        background-color:#BA2334;     
+      }        
+      &.cecc{
+        background-color:#00B1EC;     
+      }      
+      &.osea{
+        background-color:#A40C34;     
+      }  
+
+      h2{
+       color:white;
+      }
+        
+      .icon {
+        border: 2px solid $off-white;
+        border-radius: 50%;
+        margin: 20px 0 0 5px;
+        position: absolute;  
+          
+        @media $small{     
+          margin:20px 30% 0;
+          position:relative;    
+        }
+          
+      }
+  
+      ul{
+        border-top: none;
+        display: inline-block;
+        margin:1.0em 0 1.0em 5em;
+        border-left: 1px solid white;
+          
+        &:nth-child(n+3){
+         margin-top:1.5em;    
+        }  
+          
+        @media $small{     
+          border-left:none;    
+          border-top:1px solid rgba(255,255,255,0.2);
+          display:block; 
+          margin:1.0em -1em 0;    
+        }  
+              
+        li{
+         padding: 0 0.8em;
+            
+         &:first-child{
+           margin-top: 0.5em;
+         }
+        
+            
+         a{
+          border-bottom:1px solid transparent;     
+          color:white;
+          font-size:20px;
+          line-height: 2.5;
+             
+          @media $small{
+            font-size:responsive 16px 18px;
+            line-height: 2;      
+          }      
+             
+          &:hover{
+            border-bottom:1px solid white;
+          } 
+                 
+        }    
+            
+      }
+          
+    }
+
+  }
+    
+}
+ 
+    #modal2 >.contact{
+      background-color:#BA2334;    
+    }    
+    #modal3 >.contact{
+      background-color:#00B1EC;    
+    }    
+    #modal4 >.contact{
+      background-color:#A40C34;    
+    }
+
+.modal-close{
+    color: white;
+    cursor: pointer;
+    height: 30px;
+    position: absolute -25px 10px auto auto;
+    text-decoration: none;
+    width: 30px;
+    
+    @media $small{
+     position:absolute -25px -20px auto auto;   
+    }
+
+    &:before {
+      left: 8px;
+      transform: rotate(45deg);
+    }
+    
+    &:after {
+      right: -12px;
+      transform: rotate(-45deg);
+    }
+    
+    &:before, &:after {
+      background-color: white;
+      content: "";
+      height: 2px;
+      position: absolute;
+      width: 35px;
+    }
+    
+}
+
+.modal-show{
+  visibility: visible;
+}
+
+.modal-transition {
+	opacity: 0;
+	transition: all 0.3s;
+}
+
+.modal-show .modal-transition {
+	opacity: 1;
+}   
+/* ------- end:regional-modals  ---------  */   
+
+
+/* ------- start:section-listing-left-menu  ---------  */  
+.section-listing {
+    background-color:$export-blue-100;
+    padding: 20px 10px;
+        
+    h3{
+     color:#ffffff;    
+     font-size:responsive 18px 25px;
+     font-weight:$bold;
+     padding:0.25em 0;
+     
+    }     
+    
+    h4{
+     color:#ffffff;    
+     font-size:responsive 18px 20px;
+     font-weight:$normal;
+     padding:0.25em 0;
+    } 
+        
+    ul{
+     font-size:1.1em; 
+     font-weight:$bolder;
+     line-height: 1.2;
+     margin:10px 0;
+            
+     li{
+      color:#ffffff;
+      font-size:1.0em; 
+      font-weight:$normal;
+      list-style-type: square;
+      margin:10px 10px 10px 20px;
+
+    
+
+     }
+            
+   }
+              
+}  
+/* ------- end:section-listing-left-menu  ---------  */  
+
+
+/* ------- start:testimonials  ---------  */  
+.testimonials{
+        
+   h3{ 
+    font-size:responsive 20px 28px;
+    font-weight:$normal;
+    padding:0.5em 0;
+    text-transform: uppercase;
+            
+    @media $large{ 
+      font-weight:$normal;
+      padding: 0.5em 0;
+      text-transform:uppercase;
+    }
+  }  
+        
+  p{
+   font-size:responsive 16px 18px;       
+   width:100%;
+
+   &:last-of-type{
+    margin-bottom:0;
+   }   
+
+   @media $medium{ 
+     width:95%;   
+   }
+
+   }    
+             
+   blockquote{
+     color:$export-blue-200;
+     font-size:responsive 18px 20px;
+     font-style: italic;
+     line-height:1.5;
+     margin: 1.5em 0;
+     padding: 0 0.5em;
+     position:relative;
+
+     @media $medium{ 
+       padding: 0 2.5em; 
+     }   
+
+     &:before{
+       color:$export-blue-200;
+       content: "\201C";
+       font-size: 2em;
+       line-height: 0.1em;        
+       position:absolute 0.4em auto auto -.2em;
+
+       @media $medium{
+         font-size: 5em;
+         line-height: 0.1em; 
+         position:absolute 0.3em auto auto 5px;    
+       }
+
+     }
+
+   }
+          
+}     
+/* ------- end:testimonials  ---------  */            

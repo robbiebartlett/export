@@ -1,0 +1,264 @@
+/* ==========================================================================
+   Modules - Submenu styles
+   ========================================================================== */
+
+/*1. Secondary Menu*/
+
+/*2. Secondary Menu - Contact Submenu - regional controls */
+
+
+
+/* --- start:section-submenu --- */   
+    .section-submenu{
+        background-color:white;  
+        display:none; 
+        
+        /* ------- hide all except this one for region selection ---------  */  
+        &.contact-menu{
+            display:block!important;
+        }
+        
+        @media $large{ 
+         display:block;  
+
+         ul{
+
+            li{
+              margin:0;  
+              padding:0;
+                
+               &.active a{
+                 background-color:$export-blue-100;  
+                 color:white;
+               }      
+                
+              /* ------- start:secondary-menu arrows ---------  */  
+              .submenu{
+                cursor:pointer;
+                position: relative;
+                  
+                &:before, &:after {
+                  background-color:$dark-grey;
+                  content: "";
+                  height: 8px;
+                  position: absolute 20px 20px auto auto;
+                  width: 2px;
+                    
+                  @media $large{  
+                    top:28px;
+                  }    
+                    
+                }
+
+                &:before{
+                  transform:translate(-2px, 0) rotate(-45deg);
+                }
+                &:after{
+                  transform: translate(2px, 0) rotate(45deg);
+                }
+
+                &.active{
+                     
+                   &:before{
+                     transform: translate(2px, 0) rotate(-45deg);    
+                   }
+        
+                   &:after{
+                     transform: translate(-2px, 0) rotate(45deg);    
+                   }      
+                     
+                 }
+                  
+              } 
+              /* ------- end:secondary-menu arrows ---------  */      
+                
+               /*--- Submenu dropdown ---*/   
+                 ul{
+                    background-color:$grey-50;
+                    box-shadow:inset 0px 5px 5px -5px rgba(0, 0, 0, 0.5),inset 0px -5px 5px -5px rgba(0, 0, 0, 0.5);
+                     
+
+                    li{
+                       
+                       &:first-of-type{
+                         
+                         a{
+                             &:hover{box-shadow:inset 0px 5px 5px -5px rgba(0, 0, 0, 0.5);}
+                             
+                         }
+                                          
+                     }   
+                        
+                     &:last-child{
+                         
+                         a{
+                             &:hover{box-shadow:inset 0px -5px 5px -5px rgba(0, 0, 0, 0.5);}
+                             
+                         }
+                                          
+                     } 
+
+                              a{
+                                 border-bottom: 1px solid transparent;    
+                                 font-size:1.1em;
+                                 text-indent:0.5em;
+                                  
+                                   &:hover{
+                                     background-color:$export-blue-100;
+                                     color:white;
+ 
+                                   } 
+                                  
+                              } 
+                              
+                          }
+                          
+                          
+                      }
+                      
+
+              a{
+               border-bottom:1px solid transparent;      
+               display:flex;
+               color:$dark-grey;    
+               font-size:responsive 18px 20px; 
+               padding:0.75em 0.5em; 
+                  
+               @media $medium{  
+                 padding:0.75em;     
+               }
+                
+               @media $large{  
+                 padding:1.0em 0.5em;     
+               }
+                  
+                  
+                  
+                &:first-of-type{
+                    padding-top:0.75em;
+                    
+                    @media $large{  
+                      padding-top:1.0em;
+                    }
+                    
+                }    
+                
+                &:last-child{
+                   padding-top:0.75em;
+                    
+                    @media $large{  
+                      padding-top:1.0em;
+                    }
+                    
+                }  
+               
+               
+               &:hover{
+                 background-color:$export-blue-100;
+                 color:white;   
+                 text-decoration: none;
+
+                 &:before, &:after {
+                   background-color:white;    
+                 } 
+      
+                   
+               }  
+
+             }/* --- end:section-submenu li a --- */  
+
+           }/* --- end:section-submenu li --- */ 
+              
+        }/* --- end:section-submenu ul li --- */   
+          
+        }
+
+    }
+/* --- end:section-submenu --- */ 
+
+
+
+/* --- start:contact-submenu --- */  
+#contact-menu{
+    
+  .wrap_controls{   
+    
+    .ullist{
+      list-style: none; 
+      margin:0;
+      padding:0;
+
+      li{
+        margin:0;
+        padding:0;
+
+      &.active a{
+         background-color:$export-blue-100;
+
+          span{
+            color:white;
+          }  
+
+      }  
+
+      /* --- overwrites original submenu to accomodate maplace.js plugin --- */ 
+      a{
+       padding:0!important;
+
+       span{
+        border-bottom:1px solid transparent;      
+        display:flex;
+        color:$dark-grey;    
+        font-size:responsive 18px 20px; 
+        padding:0.75em 0.5em;
+
+        &.current{
+           background-color:$export-blue-100;
+           color:white;
+        }      
+
+        @media $medium{  
+           padding:0.75em;     
+        }
+
+        @media $large{  
+           padding:1.0em 0.5em!important;     
+        }
+
+        &:first-of-type{
+           padding-top:0.75em;
+
+           @media $large{  
+              padding-top:1.0em;
+           }
+
+        }    
+
+        &:last-child{
+           padding-top:0.75em;
+
+           @media $large{  
+             padding-top:1.0em;
+           }
+
+        }  
+
+        &:hover{
+           background-color:$export-blue-100;
+           color:white;   
+           text-decoration: none;
+        }  
+
+      }/* --- end:.ullist li a span --- */  
+
+     }/* --- end:.ullist li a --- */     
+
+    }/* --- end:.ullist li --- */ 
+
+   }/* --- end:.ullist --- */   
+
+  }/* --- end:.wrap-controls --- */   
+ 
+}/* --- end:#contact-submenu --- */  
+
+

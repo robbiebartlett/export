@@ -1,0 +1,211 @@
+/* ==========================================================================
+   ExportNZ - Our People
+   ========================================================================== */
+
+/* ------- start: our-people ---------  */  
+.our-people{
+  background-color:white;
+  padding: 20px 0 0;
+  position: relative;
+        
+  /* ------- start: slider ---------  */  
+  .slider {
+    background-color: white;
+    margin: 0 auto;
+    overflow: hidden;    
+    padding: 0;
+
+    @media $large{
+      padding: 0 50px;
+    } 
+    
+    li{
+      cursor:url(../images/openhand.cur), move;   
+      height: auto;
+      float: left;
+      text-align: center; 
+        
+        &:active{
+          cursor: url(../images/closedhand.cur), move;  
+        }    
+    
+      &:hover a, &.current a{
+        border:1px solid $export-blue-100;
+        box-shadow:0 2px 3px rgba(0,0,0,0.12), 0 0px 2px rgba(0,0,0,0.24);
+      }
+      
+    } 
+
+  .people-thumbnail{
+     border: 1px solid $dark-grey;
+     border-radius: 50%;
+     cursor:pointer;  
+     display:inline-flex;
+     height: 100%;
+     margin: 10px auto;   
+     max-width:95%;
+     overflow: hidden;
+     transition: all 0.2s ease-in-out;    
+   }
+
+  .people-info{
+ 	margin:0 10px;
+    text-align: center;
+    visibility:hidden;
+      
+    @media $medium{
+      visibility:visible;
+    }  
+    
+    h3{
+     font-size:0.6em;
+     font-weight:$normal;
+     margin: 0 0 30%;
+        
+     @media $small{
+       font-size:0.4em;       
+     }    
+        
+     @media $medium{
+       font-size:0.8em;
+     }
+        
+    }
+
+   }
+      
+ }
+ /* ------- end: slider ---------  */
+
+} 
+/* ------- end: our-people ---------  */  
+    
+
+
+/* ------- start: our-people-info ---------  */ 
+.our-people-info{
+  max-width:100%!important;
+       
+  /* ------- start: people----------  */   
+  .grid-item{
+    margin: 20px 0;
+      
+     &.active{
+        display:block;   
+      }  
+      &.hide{
+        display:none;   
+      }      
+
+    .grid-content {
+      background:white;              
+      display: flex;
+      padding:0.5em;  
+        
+      @media $medium{  
+        padding:1.5em;
+      }
+
+      .nested-grid-item{  
+        lost-row:1/2; 
+
+         @media $medium{
+           lost-column:1/2 30px no-flex;     
+           min-height:450px; 
+         }
+
+         &:last-of-type{
+           position: relative;
+         }   
+
+         h2{
+          font-size:responsive 32px 40px;
+          font-weight:$light;
+          margin-bottom:10px;    
+         }
+         h3{
+          font-size:responsive 24px 30px; 
+          font-weight:$light;   
+         } 
+         h4{
+          font-size:responsive 18px 25px; 
+          font-weight:$light; 
+          margin-top: 10px;     
+         } 
+         p{
+          margin-top:20px;  
+         }
+         img{
+           box-shadow:0 2px 3px rgba(0,0,0,0.12), 0 0px 2px rgba(0,0,0,0.24);
+           margin:0 auto;
+             
+           @media $medium{
+             margin:40px auto 0;      
+           }  
+             
+         }  
+          
+          
+         /* ------- start: people-contact-links ---------  */  
+         .people-links{
+            margin: 10px auto 0;     
+            width:300px;
+            
+            /* ------- start: people-contact-links a ---------  */    
+            a{
+             align-items: center;
+             display: inline-flex;
+             font-size: responsive 14px 16px;                
+             justify-content: center;
+             margin: 10px 0;
+             padding: 0 7%;
+                
+             @media $medium{
+               padding:0;       
+             }    
+
+             &:hover{
+               text-decoration: none;
+             }
+
+            /* ------- start: people-contact-links a span ---------  */     
+            span{
+              display:none;    
+                
+              @media $medium{
+                border-bottom:1px solid transparent;   
+                color:$dark-grey;  
+                display:block;        
+                margin-left: 15px;
+           
+                &:hover{
+                  border-bottom:1px solid $dark-grey;
+                  text-decoration: none;
+                }
+                           
+               }
+                
+             }
+            /* ------- end: people-contact-links a span ---------  */   
+           }
+            /* ------- end: people-contact-links a ---------  */ 
+         }  
+         /* ------- end: people-contact-buttons ---------  */ 
+
+        
+       }
+       /* ------- end: people-info ---------  */  
+      
+        
+    }
+        
+  }
+   
+}
+/* ------- end: our-people-info ---------  */ 
+
+  
+
+
+
+

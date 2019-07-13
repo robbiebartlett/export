@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Modules - Sponsor Box styles
+   ========================================================================== */
+
+ /* --- start:section-sponsors --- */        
+.section-sponsors {
+  background:white;    
+  display:none;
+  height: 180px;  
+  padding: 0;    
+  position: relative;
+  overflow: hidden;
+  margin:20px auto 0 auto;
+  width: 100%;    
+    
+  @media $large { 
+    display:block;
+  }    
+    
+  p{
+   color:$dark-grey;
+   font-size:0.8em;
+   margin:0;
+   position: absolute auto 10px 5px auto;
+  }    
+  
+  .sponsor{
+    display:inline;
+    height: 180px;
+    margin: auto;
+    position: relative; 
+ 
+    a{
+     position: absolute 50% auto auto 50%;
+     transform: translate(-50%, -50%);
+     width: 180px;
+     }    
+        
+  }  
+      
+    
+}
+/* --- end:section-sponsors --- */  
+        

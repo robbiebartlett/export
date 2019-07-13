@@ -1,0 +1,379 @@
+/* ==========================================================================
+   Modules - Search styles
+   ========================================================================== */
+
+
+/* ------- start: Mobile Search button---------  */ 
+.mobile-search{
+  position:absolute;
+  right:59px;
+  width: 60px;
+
+ .search-trigger{
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;  
+    color: transparent;
+    display: block;
+    height:60px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    width:60px;
+    /* hide text */
+    z-index:$z-index-3;
+    
+    /* search icon */
+    &:before, &:after{
+      backface-visibility: hidden;  
+      content: '';
+      position: absolute;
+      transition: opacity 0.3s;
+      transform: translateZ(0);   
+    }
+    
+    &:before{
+     /* lens */
+     border:0.18em solid $grey-800;
+     border-radius: 50%;     
+     height: 19px;
+     left: 17px;
+     top: 19px;
+     width: 19px;    
+    }
+    
+    &:after {
+      /* handle */
+      background:$grey-800;
+      bottom: 19px;
+      height: 3px;
+      right: 17px;
+      transform: rotate(45deg);
+      width: 13px;    
+    }
+    
+    span{
+      /* container for the X icon */
+      height: 100%;
+      position: absolute 0 auto auto 0;    
+      width: 100%;
+        
+      &:before, &:after{
+        /* close icon */
+        backface-visibility: hidden;      
+        background: $grey-800;   
+        content: '';
+        display:inline-block;
+        height: 3px;
+        margin-left: -16px;
+        margin-top:0;  
+        opacity: 0;   
+        position: absolute 50% auto auto 50%;
+        transform: translateZ(0);
+        transition: opacity 0.2s, transform 0.2s;  
+        width:31px;     
+      } 
+        
+      &:before {
+        transform: rotate(45deg);
+      }
+        
+      &:after {
+        transform: rotate(-45deg);
+      }  
+         
+    }
+     
+
+    /* add live icon background color */ 
+    &.searchopen{
+      background-color: $grey-50;
+      border-left: 1px solid $grey-300;
+      border-right: 1px solid $grey-300;
+     } 
+    
+    /* hide search icon */
+    &.searchopen::before, &.searchopen::after {  
+       opacity: 0;
+    }
+    
+    /* show close icon */
+    &.searchopen span::before, &.searchopen span::after {
+      opacity: 1;
+    }
+    
+    &.searchopen span::before {
+      transform: rotate(135deg);
+    }
+    &.searchopen span::after {
+      transform: rotate(45deg);
+    }
+    
+  }
+    
+}   
+/* ------- end: Mobile Search button---------  */ 
+
+
+
+/* ------- start:Search box---------  */ 
+.search{
+  border-top: 1px solid $grey-300;    
+  height: 65px;  
+  margin-top: -50px;   
+  opacity: 0;    
+  position:relative;
+  transition: opacity .3s 0s, visibility 0s .3s;
+  visibility: hidden;    
+  width: 100%;
+  z-index:$z-index-1;
+
+  @media $large{
+    align-self: center;  
+    border-top:none; 
+    flex-grow: 1;
+    height:50px;
+    margin:0;  
+    opacity:1;   
+    visibility: visible;  
+    width: auto;
+    z-index:$z-index-6;   
+  }  
+
+    
+}
+/* ------- end:Search box---------  */ 
+
+
+/* ------- start:Search form---------  */ 
+.search form {
+  color:$dark-grey;    
+  font-size: 1.2em;    
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  background-color:$grey-50;
+    
+  @media $large{     
+    padding:0; 
+  }    
+    
+}  
+/* ------- end:Search form---------  */ 
+
+
+/* ------- start:Search input---------  */ 
+.search input { 
+  background: #ffffff;
+  border:1px solid $export-blue-300; 
+  border-radius: 0;
+  height: 100%;
+  padding: 0 2%;
+  width: 100%;
+  
+  @media $large{
+    font-weight: 300;     
+    padding: 2% 50px 2% 2%;
+  }  
+    
+}
+/* ------- end:Search input---------  */ 
+
+
+
+.search input::-webkit-input-placeholder {
+  color: $grey-300;
+}
+.search input::-moz-placeholder {
+  color: $grey-300;
+}
+.search input:-moz-placeholder {
+  color: $grey-300;
+}
+.search input:-ms-input-placeholder {
+  color: $grey-300;
+}
+.search input:focus {
+  outline: none;
+}
+.search.searchopen{
+  margin-top:0;  
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.2s ease-in-out;
+}
+.nav-is-fixed .search {
+  position: fixed;
+}
+
+/* ------- start:Desktop Search button---------  */ 
+.search-button{
+    background-color:$export-blue-300;
+    border:none;
+    height:44px;
+    position:absolute 10px 10px auto auto;
+    width:44px;
+   
+    
+   @media $large{
+     height: 50px;   
+     outline:none;
+     overflow: hidden;   
+     right:0;  
+     top:0;
+     white-space: nowrap;
+     width: 50px;
+     z-index:$z-index-3;
+   }
+    
+   &:before, &:after {
+    content: '';
+    position: absolute;
+    transition: opacity 0.3s;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+   }     
+    
+   &:before {
+     border: 2px solid #ffffff;
+     border-radius: 50%;
+     height: 20px;
+     left:11px;
+     top: 11px;
+     width: 20px;
+       
+     @media $large{
+      height:22px;
+      width:22px;
+     }   
+       
+   }
+
+   &:after {
+     background:#ffffff;
+     bottom: 11px;
+     height: 3px;
+     right: 8px;
+     transform: rotate(45deg);
+     width: 12px;
+       
+     @media $large{
+       bottom:14px;     
+       right: 10px; 
+       width: 14px;     
+     }    
+       
+   } 
+    
+}
+/* ------- end:Desktop Search button---------  */ 
+
+/* ------- start: input settings ---------  */ 
+input[type="search"]::-ms-clear {
+  /* removes close icon - IE */
+  display: none;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+/* ------- end: input settings ---------  */ 
+
+
+
+
+
+
+
+/* ------- start:hero search box---------  */ 
+.hero-search{ 
+   align-self: center;
+   border-top: none;
+   flex-grow: 1;
+   height: 55px;
+   margin: 0 auto;
+   opacity: 1;
+   position:relative;
+   width:100%;    
+   visibility: visible;
+   z-index:$z-index-6;  
+
+  @media $medium{
+    width: 60%; 
+  }  
+   
+}
+/* ------- end:hero search box---------  */ 
+
+
+/* ------- start:hero search form---------  */ 
+.hero-search form {
+  color:$dark-grey;    
+  font-size: 1.2em;    
+  height: 100%;
+  width: 100%;
+  padding:0;
+  background-color:$grey-50; 
+}  
+/* ------- end:hero search form---------  */ 
+
+/* ------- start:hero search input---------  */ 
+.hero-search input { 
+  background: #ffffff;
+  border:1px solid $export-blue-200; 
+  border-radius: 0;
+  font-weight: 300;   
+  height: 100%;    
+  padding: 3% 50px 2% 2%;
+  width: 100%;
+  
+  @media $medium{       
+    padding: 2% 50px 2% 2%;    
+  }
+    
+}
+/* ------- end:hero search input---------  */ 
+
+
+/* ------- start:Hero search button---------  */ 
+.hero-search-button{
+    background-color:#ffffff;
+    border:none;
+    height:50px;
+    outline:none;
+    overflow: hidden;
+    position:absolute 2px 2px auto auto;
+    white-space: nowrap;
+    width:50px;
+    z-index:$z-index-3;
+    
+   &:before, &:after {
+    content: '';
+    position: absolute;
+    transition: opacity 0.3s;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+   }     
+    
+   &:before {
+     border: 2px solid $export-blue-400;
+     border-radius: 50%;
+     height: 22px;
+     left:11px;
+     top: 11px;
+     width: 22px;  
+   }
+
+   &:after {
+     background:$export-blue-400;
+     bottom: 14px;
+     height: 3px;
+     right: 10px;
+     transform: rotate(45deg);
+     width: 14px;
+
+   } 
+    
+}
+/* ------- end:Hero search button---------  */

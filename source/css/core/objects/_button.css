@@ -1,0 +1,61 @@
+/** OBJECTS-BUTTON **/
+
+/*Button vars*/
+$btn-padding:   ('xs': 10px, 's': 12px, 'm': 14px, 'l': 16px, 'xl': 26px);
+$btn-font-size: ('xs': 11px, 's': 11px, 'm': 13px, 'l': 14px, 'xl': 16px);
+$btn-icon-size: ('xs': 13px, 's': 15px, 'm': 20px, 'l': 24px, 'xl': 28px);
+
+
+
+
+
+/*Button base styles*/
+.btn,
+%btn {
+    z-index: 2;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: $base-round;
+    background-color: transparent;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        outline: none;
+    }
+
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+
+    .ripple {
+        z-index: -1;
+    }
+}
+
+
+
+
+
+/*
+
+Icon / FAB buttons
+*/
+.btn--icon,
+.btn--fab,
+%btn--icon,
+%btn--fab {
+    border-radius: 50%;
+}
+
+

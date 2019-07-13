@@ -1,0 +1,115 @@
+/* ==========================================================================
+   Modules - Lost grid | https://github.com/peterramsing/lost
+   ========================================================================== */
+
+/*PostCSS fractional grid system built with calc()*/
+
+@lost gutter 1.618em;
+@lost flexbox flex;
+@lost cycle none;
+
+.grid{
+    display:flex;
+    flex-wrap: wrap;
+    lost-center:95%;
+    height:100%;
+    margin-bottom:2em;
+    transition: all 0.2s ease-in-out;
+    width:100%;
+
+    @media $small{
+      lost-center:90%;
+    }        
+    @media $medium{
+      lost-center:80%;
+    }    
+    @media $large{
+      lost-center:95%!important;
+    }    
+    @media $x-large{
+      lost-center:80%!important;
+    }
+    
+}
+
+.grid .grid-item{
+    margin-bottom:20px;
+}
+
+/* ==========================================================================
+   Columns 
+   ========================================================================== */
+
+/* --- General column settings in unison with lost.css. These may be overridden on specific pages --- */  
+
+/* --- left-column - majority of 1/4 pages --- */  
+.grid .left-column{
+  lost-column: 1/1;
+    
+  @media $large{
+    lost-column: 1/4;
+  } 
+
+}
+
+/* --- main-column - majority of 3/4 pages --- */  
+.main-column{
+  lost-column:4/4 30px no-flex;
+  margin-top:20px; 
+    
+   @media $large{  
+     lost-column: 3/4;
+     margin-top:0;
+   }
+
+  }
+
+/* --- main-column - whole pages --- */  
+.timeline-column{
+  lost-column:4/4 30px no-flex;
+}
+
+
+/* ==========================================================================
+   grid common Elements
+   ========================================================================== */
+
+
+/* ------- start: grid Item common elements ---------  */
+.grid-item {
+   display: flex;
+   text-align:left;
+   transition: all 0.2s ease-in-out;
+} 
+/* ------- end: grid Item common elements ---------  */
+
+
+
+/* ------- end: grid Content common elements ---------  */
+.grid-content{
+      display: flex;
+      flex-direction: column;
+      lost-center:100%;  
+      overflow:hidden;
+      width: 100%;
+    
+      h2{
+        font-size:responsive 20px 22px;
+        font-weight:$normal;
+        text-transform: uppercase;
+        width: 100%;
+      }
+
+      p{
+       font-size:responsive 16px 17px;  
+       line-height: 1.5;
+       margin: 1.0em 0 ;
+       padding: 0;
+      }
+    
+      h4{
+       font-size:responsive 15px 16px;  
+      }
+    
+}/* ------- end: grid Content common elements ---------  */
+

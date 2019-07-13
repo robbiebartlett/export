@@ -1,0 +1,116 @@
+/** Base - Typography **/
+
+@import url('//fonts.googleapis.com/css?family=Arimo');
+@import url('//fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+@import url('//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css');
+
+$font-primary:'Arimo', sans-serif;
+$font-secondary:'Open Sans', serif;
+
+
+/*Font Weights*/
+$light      :  300;
+$normal     :  400;
+$medium     :  500;
+$bold       :  700;
+$extra-bold :  800;
+$ultrabold  :  900;
+
+/*
+//Fonts
+//@include headings(){
+//    font-family: $font-primary;
+//    font-weight: normal;
+//    color: $grey-800;
+//    font-smoothing: antialiased;
+//    -moz-font-smoothing: antialiased;
+//    -webkit-font-smoothing: antialiased;
+//    -webkit-font-smoothing: subpixel-antialiased;
+//    margin: 0;
+//    padding: 0;
+//}
+*/
+
+h1 {
+    color: $white;
+    font-size: 2.7rem;
+    font-weight: $bold;
+    line-height: 100%;
+}
+
+h2 {
+    padding: 0 2%;
+    color: $grey-800;
+    @include font-size(26px);
+    line-height: 2;
+    text-transform: uppercase;
+    text-align: center;
+
+    .container & {
+        padding: 0 1%;
+    }
+
+    &.title {
+        margin-top: triple($margin);
+    }
+
+    @media screen and($lap-and-up) {
+        @include font-size(30px);
+    }
+
+    @media screen and($note-and-up) {
+        @include font-size(35px);
+    }
+
+    @media screen and($desk) {
+        @include font-size(40px);
+    }
+
+    a {
+        color: $grey-800;
+    }
+}
+
+h3 {
+    @include font-size(22px);
+    font-weight: $medium;
+    text-align: left;
+    margin-bottom: double($margin);
+
+    @media screen and($lap-and-up) {
+        @include font-size(24px);
+    }
+
+    @media screen and($desk) {
+        @include font-size(30px);
+    }
+}
+
+h4 {
+    @include font-size(20px);
+}
+
+p {
+  font-family: $font-secondary;
+  font-weight: $normal;
+  margin-bottom: 1.5em;
+}
+
+a {
+    color:$light-blue;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+}
+
+ul, ol {
+    padding-left: ($padding * 5);
+    margin-bottom: 1.5em;
+
+    ul, ol {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+}

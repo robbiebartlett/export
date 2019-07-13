@@ -1,0 +1,233 @@
+/* ==========================================================================
+   Module - Feedback Form styles
+   ========================================================================== */
+
+.section-feedback{
+    background-color:$export-blue-100;
+    border: 1px solid transparent;
+    lost-center:100%;
+    margin: 0;
+    position: relative;
+    
+/* ------- start: Header Title ---------  */
+.header{
+    lost-column:1/1 0;
+    margin:30px 0 0;
+    padding: 0 0.5em;
+    text-align: left;
+
+    @media $small{
+      padding: 0 1.5em;
+    }   
+    @media $medium{
+      padding: 0 1.0em;
+    }  
+
+     .nested-grid-item{  
+        lost-column:1/1 0 no-flex;
+    }
+
+    h2{ 
+      color:$export-blue-400;  
+      font-size: responsive 25px 32px;
+      font-weight:$bold;
+      text-transform: uppercase;
+    }  
+
+}/* ------- end: Header Title ---------  */
+ 
+    .grid{
+      background-color:$white;
+      margin-top: 30px;
+      max-width:95%;
+      padding-bottom: 20px;
+      
+      @media $medium{
+        padding-bottom:0;      
+      }    
+
+      @media $large {
+        max-width:70%;  
+      }
+
+    }    
+    
+    .grid-item {
+       lost-column:1/1 0;
+
+       @media $large { 
+         lost-column:1/1 2 no-flex;      
+         padding:0.5em 0.65em!important;
+       } 
+
+     } 
+
+    .grid-content{
+       lost-column:1/1;
+       height:100%;
+       padding-bottom:1.0em;
+       position:relative;    
+       
+       @media $medium{
+          padding-bottom:0; 
+       } 
+
+       .nested-grid-content{
+          border: 0;
+          padding:0 0.5em;
+
+          @media $small{
+            padding:0 1.5em;      
+          }   
+
+          @media $medium{ 
+            lost-column:1/2;
+            padding:0 1.0em;     
+          }  
+
+          @media $large{ 
+            padding:0 0.5em!important;
+          } 
+
+        .check{
+           margin:0;
+
+           &:first-of-type{
+             position: relative -10px auto auto auto;
+           }
+
+         } 
+
+         fieldset{
+           margin: 0 0 30px;
+           max-width:590px;
+         } 
+       
+         .title{
+            border:none!important;
+            color:$dark-blue;  
+            font-size: responsive 16px 20px;
+            font-weight:$normal;
+            margin-bottom:10px;
+            text-transform: uppercase;
+          }  
+           
+         .btn{
+           margin:0 0 20px 1.5%;
+
+           @media $medium{
+             margin:0 0 20px 0.5%;    
+           } 
+           @media $large{
+             margin:0 0 20px 2.0%!important;     
+           }
+             
+         }  
+           
+      }
+
+    }
+
+    label{
+      width:280px;
+      border-radius: 3px;
+      border: 1px solid $grey-400;
+
+      @media $medium{  
+        width:300px;
+      }   
+
+      &.comments-title{
+        border:none;
+      } 
+
+    }
+    
+    .comments{
+      border:1px solid $grey-400;
+      margin-top:25px;
+      width:100%;  
+    
+      @media $medium{  
+        margin-top:55px;
+      }
+
+      @media $x-large{  
+        margin-top:32px;
+      }
+    
+    }    
+    
+
+/* hide input */
+    input{
+
+        &.radio:empty {
+          margin-left: -999px;
+        }
+
+        /* style label */
+        &.radio:empty ~ label {
+            position: relative;
+            float: left;
+            line-height: 2.5em;
+            text-indent: 3.25em;
+            margin-top: 2em;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        &.radio:empty ~ label:before {
+            position: absolute 0 auto 0 0;
+            display: block;
+            content: '';
+            width: 2.5em;
+            background:$export-blue-100;
+            border-radius: 2px 0 0 2px;
+        }
+
+        /* toggle hover */
+        &.radio:hover:not(:checked) ~ label:before {
+            content:'\2714';
+            text-indent: .9em;
+            color:$off-white;
+        }
+
+        &.radio:hover:not(:checked) ~ label {
+            color:$export-blue-400;
+        }
+
+        /* toggle on */
+        &.radio:checked ~ label:before {
+            content:'\2714';
+            text-indent: .9em;
+            color: $white;
+            background-color:$export-blue-400;
+        }
+
+        &.radio:checked ~ label {
+            color:$dark-grey;
+        }
+
+        /* radio focus */
+        input.radio:focus ~ label:before {
+            box-shadow: 0 0 0 1px $export-blue-50;
+        } 
+            
+   }    
+    
+    
+ 
+
+ 
+    input[type=text]:focus,input[type=email]:focus,input[type=url]:focus,input[type=password]:focus,textarea:focus {
+        outline: 0;
+        border-color:$export-blue-100;
+    }    
+
+} /* .section-feedback*/
+
+
+
+
+

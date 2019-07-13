@@ -1,0 +1,199 @@
+/* ==========================================================================
+   ExportNZ - Accordian
+   ========================================================================== */
+
+.accordion {
+    background:white;
+    overflow:hidden;
+    width:100%;
+}
+
+
+/*----- start:Titles-----*/
+.accordion-title {
+    background-color:white;
+    border-bottom:1px solid $off-white;
+    color:$dark-grey;
+    display:inline-block;
+    font-family:$font-primary;
+    font-size:responsive 20px 22px;
+    font-weight:$light;
+    line-height: 1.5;
+    padding:1.0em;
+    position: relative;
+    text-decoration:none;
+    text-transform: uppercase;
+    transition:all linear 0.15s;
+    width:100%;
+    
+    &.active, &:hover{
+      background-color:$export-blue-100;
+      border-bottom:1px solid $export-blue-100;
+      color:white;
+      text-decoration:none;    
+        
+      &:before, &:after {
+        background-color:white;    
+      } 
+        
+    } 
+    
+    &.active{
+      &:before{
+        transform: translate(2px, 0) rotate(-45deg);    
+      }
+        
+      &:after{
+        transform: translate(-2px, 0) rotate(45deg);    
+      } 
+        
+    }
+    
+    &:before, &:after {
+      background-color:$dark-grey;
+      content: "";
+      height: 8px;
+      position: absolute 30px 20px auto auto;
+      width: 2px;
+        
+      @media $medium{  
+        top:35px;  
+      }   
+      @media $large{  
+        top:40px;  
+      }    
+        
+    } 
+    
+    &:before{
+      transform: translate(-2px, 0) rotate(-45deg);    
+    }
+    &:after{
+      transform: translate(2px, 0) rotate(45deg);    
+    }    
+    
+    
+}
+
+.accordion-section:last-child{
+
+    .accordion-title {
+	  border-bottom:none;
+    }
+    
+    .accordion-content {
+      box-shadow:inset 0px 10px 7px -9px rgba(0, 0, 0, 0.5),inset 0px -10px 7px -9px rgba(0, 0, 0, 0);  
+
+    }
+  
+} 
+/*----- end:Titles-----*/
+
+
+
+/*----- start:Content-----*/
+.accordion-content {
+     box-shadow:inset 0px 10px 7px -9px rgba(0, 0, 0, 0.5),inset 0px -10px 7px -9px rgba(0, 0, 0, 0.5); 
+     display:none;
+     padding:0 0.5em;
+
+    table{
+      border-collapse: collapse;
+      margin: 0;
+      min-width: 300px;
+      overflow: hidden;
+      width: 100%;
+        
+      th{
+        display:none; 
+      }    
+        
+      tr{
+        border-top: 1px solid $grey-300;
+        border-bottom: 1px solid $grey-300;
+        font-family:$font-secondary;
+        font-size:responsive 16px 20px;
+        font-weight:$light;
+            
+        &:first-of-type{
+          border-top: none;
+        }   
+        &:last-of-type{
+          border-bottom: none;
+        }        
+            
+      }
+        
+     th, td {   
+       margin: 0;
+       padding: 0.5em;
+       text-align: left;
+    
+       @media $medium{
+         display: table-cell;  
+         margin: .5em 1em; 
+         padding: 1.0em; 
+       }    
+
+       &:before{
+         color:$dark-grey;      
+      }    
+    
+    }
+        
+      td {
+       display: block;
+       text-align: left;
+       margin:0;
+       padding:0.5em 0;   
+          
+       @media $medium{
+         margin: .5em 1em;
+         padding: 1.0em;         
+       }      
+    
+       span{
+         display:block;
+         right:-105px;
+         position: relative;
+
+         @media $medium{     
+          right:auto;    
+         }   
+      }
+    
+      a:hover{
+        border-bottom:1px solid $export-blue-100;
+      } 
+    
+    
+      &:before {
+        content: attr(data-th) ":";
+        display: inline-block;  
+        font-weight: bold;
+        width:6.5em;
+
+        @media $medium{
+          display: none;
+        }   
+
+      }  
+    
+    }  
+ 
+  }
+
+}
+/*----- end:Content-----*/
+
+
+
+
+
+
+
+
+
+
+
+

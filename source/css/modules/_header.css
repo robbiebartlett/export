@@ -1,0 +1,230 @@
+/* ==========================================================================
+   Module - Header styles
+   ========================================================================== */
+
+/* 1. Main Website Header */
+/* 2. Logo */
+/* 3. Secondary Header */
+
+
+/* ------- start: main-header ---------  */
+header{
+    background-color:#ffffff; 
+    height:60px;
+    margin: 0;
+    padding: 0;
+    position: fixed 0 0 auto 0;
+    width: 100%;
+    transition:transform 1s cubic-bezier(0.86, 0, 0.07, 1); 
+    z-index:$z-index-7;
+    
+    &.hide{
+      transform: translateY(-100%);
+    }
+    
+    @media $large{ 
+      height:65px;
+    }
+
+   .grid{
+     position: relative;
+     margin:0;   
+     max-width:100%;
+     transition:all 0.1s ease-in-out;
+
+     /* ------- start: logo ---------  */
+     .logo{
+        align-self: center; 
+        position:relative 0 auto auto 0;
+        z-index:$z-index-6;
+
+
+        @media $large{
+          flex-grow:1;
+          position:relative auto;
+          z-index:$z-index-7;
+        }    
+     
+        a{
+          background-color:transparent; 
+          cursor: pointer;
+          display:flex;  
+          height:59px;  
+          margin:0 0 0 10px;
+            
+          @media $large{
+           height: 65px; 
+           margin:0;   
+          } 
+
+          svg{
+           width:140px;   
+
+           @media $large{
+             width:150px;    
+           }            
+           @media $x-large{
+             width:170px;    
+           } 
+
+          }
+
+         } 
+           
+
+        }   
+     /* ------- end: logo ---------  */
+       
+      }
+
+    }
+/* ------- end: main-header ---------  */
+
+
+
+
+/* ------- start: Add shadow on scroll  ---------  */  
+.scrolling header{
+  box-shadow:0px 1px 2px 0px rgba(0,0,0,0.25);
+}
+/* ------- end: Add shadow on scroll  ---------  */  
+
+
+
+
+/* ------- start: Secondary Header  ---------  */   
+  .header{
+    cursor:default;   
+    lost-column:1/1;
+    margin-top:1.5em;
+    margin-bottom:1em;
+    padding:0 0.5em;
+      
+    a.scroll{
+      cursor:pointer;
+        
+        &:hover{
+          border-bottom: 1px solid $export-blue-100;
+        }  
+    }  
+
+    @media $medium{
+      padding:0 1.0em;
+    }       
+      
+    @media $large { 
+      padding:0 1.5em;  
+    } 
+      
+     .nested-grid-item{  
+        lost-column:1/2 30px no-flex;
+
+        span {
+          display: none;
+
+          @media $small{
+             display:inline-block;  
+          }   
+
+       } 
+  
+      /* ------- start: More Button ---------  */
+      &.button{
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        margin-top: 5px;
+   
+        .btn-primary{
+           border-radius:$base-round;
+           margin-right:0;
+           
+           padding: 0.65em; 
+            
+           @media $small{
+              padding: 0.65em 0.95em;
+           }  
+           
+        }
+
+      }/* ------- end: More Button ---------  */
+
+    }
+     
+      
+    /* ------- start: unordered lists within header ---------  */  
+      ul.key-notes, ul{
+        font-size:responsive 18px 20px;
+        line-height:2;
+          margin-bottom:10px;
+
+        li{
+          color:$export-blue-100; 
+          font-size:responsive 16px 18px;
+          list-style: square;
+          line-height:2; 
+          margin-left: 18px;
+
+          span{
+            color:$dark-grey;
+          }
+        }  
+          
+      } 
+    /* ------- end: unordered lists within header ---------  */    
+    
+
+    h2, h3, h4{ 
+        color:$dark-grey;  
+        font-size:responsive 26px 32px;
+        font-weight:$bold;
+        text-transform: uppercase;
+        
+        @media $large{ 
+           font-weight:$normal;
+        }
+
+    }   
+    h3{ 
+       font-size:responsive 20px 28px;
+
+        @media $large{ 
+           font-weight:$normal;
+        }
+
+    }  
+      
+    h4{ 
+       display:inline;
+       font-size:responsive 18px 20px;
+
+        @media $large{ 
+           font-weight:$normal;
+        }
+
+    }
+      
+          
+    /* ------- start: Contact Info ---------  */         
+    .contact p{
+       font-size:responsive 16px 18px; 
+       
+       span{
+        font-weight:$bold;    
+       } 
+        
+    }   
+    /* ------- End: Contact Info ---------  */      
+     
+
+
+    }
+/* ------- end: Secondary Header  ---------  */  
+
+
+
+
+

@@ -1,0 +1,136 @@
+/* ==========================================================================
+   Contact Us Information
+   ========================================================================== */
+
+.contact{
+  background-color:white;  
+  margin:0;
+    
+    &.form{
+        background-color:$export-blue-100;
+    }    
+
+  .grid{
+    max-width:100%!important;
+    
+    padding:0; 
+
+    .grid-item{
+      lost-column:1/1; 
+        
+      @media $small{
+        lost-column:1/2 2;  
+      }           
+
+      @media $medium{
+        lost-column:1/3 3;  
+      }      
+
+      @media $large { 
+       lost-column:1/4 4;    
+      }  
+        
+      .grid-content {
+        background-color:$off-white;
+        cursor: pointer;
+        display: flex;
+        height: auto;
+        overflow: hidden;
+        padding-bottom: 1.5em;
+        position: relative;
+        text-align: center; 
+      }
+        
+    }
+
+  }
+
+} 
+     
+
+/*
+ * Google Maps Div
+ */
+#gmap{
+  width: 100%;
+  height: 500px;
+  margin:auto;
+}
+
+             
+/*
+ * Header - jquery used to sync with Google Maps and Menu
+ */
+  .header{
+      
+
+      
+      #scroll{
+       cursor: pointer; 
+      }
+          
+
+      
+    .contact{
+
+     .nested-grid-item{  
+        margin-bottom:10px;
+        lost-column:1/1; 
+         
+      @media $medium { 
+         lost-column:1/3 30px no-flex; 
+      }   
+
+      ul{
+        margin:10px 0 0;
+
+        li{
+           color:$dark-grey;
+           font-size:0.9em;    
+           line-height: 1.5;
+           list-style-type: none;
+           margin-left:0px;
+
+             &:first-child{ 
+                 font-size:1.0em;
+                 font-weight:$bold;
+            }
+            
+            a{
+             /* ------- remove mobile number decoration in desktop view ---------  */      
+              @media $large {
+                border-bottom:1px solid transparent;  
+                color:$export-blue-100;
+                text-decoration:none;
+                  
+                &:hover{
+                  border-bottom:1px solid $export-blue-100;
+                } 
+                   
+                &.mobile-number{
+                  color:$dark-grey;
+
+                  &:hover{
+                     border-bottom:1px solid transparent;
+                      cursor: default;
+                  }
+               }  
+  
+              }      
+            }
+            
+         }
+
+      }/* ------- end: ul ---------  */   
+
+    }/* ------- end: .nested-grid-item  ---------  */   
+
+ }/* ------- end: .contact  ---------  */   
+
+}/* ------- end: .header  ---------  */                  
+     
+
+
+
+
+   

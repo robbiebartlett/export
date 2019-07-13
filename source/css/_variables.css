@@ -1,0 +1,120 @@
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+/* Normalize */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css');
+
+/* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);
+
+
+/*Font Familys */
+$font-primary:'Tahoma', Verdana, Segoe, sans-serif;  
+$font-secondary:'Source Sans Pro', sans-serif;
+
+
+/* Font Weights */
+$light             :      300;
+$normal            :      400;
+$bold              :      500;
+$bolder            :      600;
+$bolder            :      700;
+
+/* ==========================================================================
+   Media Queries - Based on Twitter Bootstrap 3
+   ========================================================================== */
+
+/* Extra Small devices, Phones - 450px */
+$small             :        screen and (min-width: 28.125em);
+
+$small-landscape   :        screen and (min-width: 28.125em) and (orientation: landscape);
+
+/* Small Devices, Tablets - 768px */
+$medium            :        screen and (min-width: 48em);
+
+/* Medium Devices, Desktops - 1200px */
+$large             :        screen and (min-width: 75em);
+
+/* Widescreen Devices, Desktops - 1600px */
+$x-large           :        screen and (min-width: 100em);
+
+/* HD Devices, TVs - 1920px */
+$hd-large          :        screen and (min-width: 120em);
+
+
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+
+/* Greys */
+$grey-50:               #FAFAFA;
+$grey-100:              #F5F5F5;
+$grey-200:              #EEEEEE;
+$grey-300:              #E0E0E0;
+$grey-400:              #BDBDBD;
+$grey-500:              #9E9E9E;
+$grey-600:              #757575;
+$grey-700:              #616161;
+$grey-800:              #353535;
+$grey-900:              #262626;
+
+
+/* Blacks */
+$black:                 #000000;
+$black-1:               rgba(0, 0, 0, 0.87);
+$black-2:               rgba(0, 0, 0, 0.54);
+$black-3:               rgba(0, 0, 0, 0.26);
+$black-4:               rgba(0, 0, 0, 0.12);
+
+
+/* Whites */
+$white:                 #FFFFFF;
+$white-1:               rgba(255, 255, 255, 0.70);
+$white-2:               rgba(255, 255, 255, 0.30);
+$white-3:               rgba(255, 255, 255, 0.12);
+
+
+/* ExportNZ */
+$export-blue-50    :      #06baff;
+$export-blue-100   :      #009ddc;
+$export-blue-200   :      #0093ce;
+$export-blue-300   :      #008ac1;
+$export-blue-400   :      #00597b;
+$export-grey       :      #5c6f7c;
+$dark-grey         :      #292827;
+$off-white         :      #f1f3f6;
+
+
+/* Miscellaneous */
+$linkedin          :      #007bb6;
+$facebook          :      #3b5998;
+$twitter           :      #55acee;
+$youtube           :      #e32a29;
+$email             :      #C32200;
+$dialogue          :      #90cc82;
+$optional          :      #c9af78;  
+
+
+/* ==========================================================================
+   Miscellaneous
+   ========================================================================== */
+
+/* High-level base settings. */
+$base-font-size        :      1.0em;
+$base-line-height      :      1.2;
+$base-round            :      0.10em;
+$base-spacing-unit     :      0.5em;
+
+
+/* Z-depths */
+$z-index--1        :      -1;
+$z-index-0         :      1000;
+$z-index-1         :      1010;
+$z-index-2         :      1020;
+$z-index-3         :      1030;
+$z-index-4         :      1040;
+$z-index-5         :      1050;
+$z-index-6         :      1060;
+$z-index-7         :      1070;
+$z-index-8         :      1080;
