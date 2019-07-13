@@ -172,7 +172,7 @@ p,em {
 
 em {
 
-    font-weight: $extra-bold;
+    font-weight: bold;
 
     font-size: 140%;
 
@@ -4958,7 +4958,7 @@ img {
 
     border: none!important;
 
-    color: $dark-blue;
+    color:#003d6e;
 
     font-size: calc(16px + 4 * ((100vw - 420px) / 860));
 
