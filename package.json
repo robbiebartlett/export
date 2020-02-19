@@ -1,9 +1,9 @@
 {
-  "name": "BusinessNZ",
+  "name": "",
   "version": "0.1.0",
   "author": "Rob Bartlett",
-  "homepage": "http://www.businessNZ.org.nz",
-  "description": "Cross functional for key BusinessNZ sites",
+  "homepage": "",
+  "description": "Cross functional for key sites",
   "readme": "PostCSS workflow encompassing fallbacks and functionality previously used in Sass",
   "license": "MIT",
   "repository": {
